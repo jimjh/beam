@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EmbeddedEditorHidden:codex</key>
+	<false/>
+	<key>ExpandedEditorWidth:codex:displays([(0, 0), (1440, 900)])</key>
+	<integer>640</integer>
+	<key>ExpandedItems:codex</key>
+	<array/>
+	<key>FileFilterID:codex</key>
+	<string>msng</string>
+	<key>OpenDocuments:codex</key>
+	<array/>
+	<key>ShowInvisibles:codex</key>
+	<false/>
+	<key>ShowSCMData:codex</key>
+	<false/>
+	<key>TextFilesOnly:codex</key>
+	<true/>
+	<key>ToolbarVisible:codex</key>
+	<true/>
+	<key>ViewSplitterPosition:codex</key>
+	<real>0.26011559367179871</real>
+	<key>WindowFrame:codex:displays([(0, 0), (1440, 900)])</key>
+	<string>rect(55,52,907,917)</string>
+</dict>
+</plist>

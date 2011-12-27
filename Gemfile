@@ -1,13 +1,17 @@
 source 'http://rubygems.org'
 
+# rails himself!
 gem 'rails', '3.1.1'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+# databases
+gem 'sqlite3'
+gem 'pg'
 
-gem 'ps'
-
+# data formats
 gem 'json'
+
+# uuid generator
+gem 'uuidtools'
 
 # Gems used only for assets and not required
 # in production environments by default.
