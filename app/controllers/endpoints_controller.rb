@@ -1,5 +1,7 @@
 class EndpointsController < ApplicationController
 
+  before_filter :check_access
+
   def index
     # get all endpoints
     @endpoints = Endpoint.all
