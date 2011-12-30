@@ -24,9 +24,10 @@ class EndpointsController < ApplicationController
   end 
 
   def check_access
-    authenticate_or_request_with_http_basic do |user_name, password|
-    # Change these to username and password required
-    user_name == "codex" && password == "abc"
+    authenticate_or_request_with_http_basic { |user_name, password|
+      # Change these to username and password required
+      user_name == "codex" && password == "abc"
+    }
   end
 
 end
