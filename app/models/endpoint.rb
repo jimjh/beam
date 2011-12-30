@@ -8,7 +8,7 @@ class Endpoint < ActiveRecord::Base
   set_primary_key( :uuid )
   
   def to_s
-    return "#<#{self.uuid}: lat:#{self.lat} lon:#{self.lon} updated:#{self.updated_on}>"
+    return "#<uuid:#{self.uuid}, lat:#{self.lat}, lon:#{self.lon}, updated:#{self.updated_on}>"
   end
 
 end

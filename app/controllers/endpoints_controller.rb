@@ -31,5 +31,16 @@ class EndpointsController < ApplicationController
       user_name == "codex" && password == "abc"
     }
   end
+  
+  # register an endpoint (AJAX)
+  def create
+    @endpoint = Endpoint.create(
+                  :lat => params[:lat],
+                  :lon => params[:lon]
+                )
+    respond_to { |format|
+      format.json {render :json => ""}
+    }
+  end
 
 end

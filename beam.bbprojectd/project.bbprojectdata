@@ -225,6 +225,43 @@
 			<key>ItemType</key>
 			<string>FolderReference</string>
 		</dict>
+		<key>3B9EC8B4-8F4E-4A06-B5C9-148034B4028A</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAIAAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJD0KnSCsAAAWlpIAUcmVnaXN0ZXJfbG9jYXRp
+				b24uanMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAABaWi58sid+9URVhUAAAAAP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAAC2phdmFzY3JpcHRz
+				AAAQAAgAAMkPiPcAAAARAAgAAMsivj8AAAABACAFpaSA
+				BZfTGgWX0dUADk0MAA3xLgAN8SoADfCcAA3wmQACAGdN
+				YWNpbnRvc2ggSEQ6VXNlcnM6AGNvZGV4OgBEb2N1bWVu
+				dHM6AERldmVsb3BtZW50OgBXZWI6AGJlYW06AHB1Ymxp
+				YzoAamF2YXNjcmlwdHM6AHJlZ2lzdGVyX2xvY2F0aW9u
+				LmpzAAAOACoAFAByAGUAZwBpAHMAdABlAHIAXwBsAG8A
+				YwBhAHQAaQBvAG4ALgBqAHMADwAaAAwATQBhAGMAaQBu
+				AHQAbwBzAGgAIABIAEQAEgBSVXNlcnMvY29kZXgvRG9j
+				dW1lbnRzL0RldmVsb3BtZW50L1dlYi9iZWFtL3B1Ymxp
+				Yy9qYXZhc2NyaXB0cy9yZWdpc3Rlcl9sb2NhdGlvbi5q
+				cwATAAEvAAAVAAIADP//AAA=
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/codex/Documents/Development/Web/beam/public/javascripts/register_location.js</string>
+				<key>RelativePath</key>
+				<string>./public/javascripts/register_location.js</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>register_location.js</string>
+			<key>ItemType</key>
+			<string>FileReference</string>
+		</dict>
 		<key>52253AF6-DA6F-4E5E-9BF0-57324CB2BFC4</key>
 		<dict>
 			<key>ItemData</key>
