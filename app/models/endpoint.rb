@@ -1,10 +1,14 @@
 require 'uuid_helper'
 
 class Endpoint < ActiveRecord::Base
-   
-  before_create :init_uuid
-  include UUIDHelper
-
-  #set_primary_key( :uuid )
+  
+  include UUIDHelper 
+  
+  before_create( :init_uuid )
+  set_primary_key( :uuid )
+  
+  def to_s
+    return "#<#{self.uuid}: lat:#{self.lat} lon:#{self.lon} updated:#{self.updated_on}>"
+  end
 
 end

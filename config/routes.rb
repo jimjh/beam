@@ -11,7 +11,7 @@ Beam::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :endpoints
 
   # Sample resource route with options:
   #   resources :products do
@@ -46,9 +46,8 @@ Beam::Application.routes.draw do
   #     resources :products
   #   end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  # route root to list of endpoints (for now)
+  root :to => 'endpoints#index'
 
   # See how all your routes lay out with "rake routes"
 
