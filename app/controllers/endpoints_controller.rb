@@ -1,6 +1,6 @@
 class EndpointsController < ApplicationController
 
-  protect_from_forgery :except => :destroy, :index
+  protect_from_forgery :except => [:destroy, :index]
   before_filter :check_access
 
   # displays a list of all endpoints
