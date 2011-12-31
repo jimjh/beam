@@ -4,7 +4,7 @@
   <title>Beam</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
-  <script src="http://js.pusherapp.com/1.9/pusher.min.js" type="text/javascript"></script>
+  <%= javascript_include_tag params[:controller] %>
   <%= csrf_meta_tags %>
 </head>
 <body>

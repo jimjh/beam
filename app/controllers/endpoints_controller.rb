@@ -2,6 +2,7 @@ class EndpointsController < ApplicationController
 
   before_filter :check_access
 
+  # displays a list of all endpoints
   def index
     # get all endpoints
     @endpoints = Endpoint.all
@@ -10,6 +11,8 @@ class EndpointsController < ApplicationController
     }
   end
 
+  # destroys the specified endpoint
+  # [id]: UUID of endpoint to delete
   def destroy
     @endpoint = Endpoint.find(params[:id])
     @endpoint.destroy
@@ -18,6 +21,8 @@ class EndpointsController < ApplicationController
     }
   end
   
+  # displays details of the specified endpoint
+  # [id]: UUID of endpoint to show
   def show
     @endpoint = Endpoint.find(params[:id])
     respond_to { |format|
@@ -25,21 +30,24 @@ class EndpointsController < ApplicationController
     }
   end 
 
+  # development only: closes off this entire controller
   def check_access
     authenticate_or_request_with_http_basic { |user_name, password|
-      # Change these to username and password required
       user_name == "codex" && password == "abc"
     }
   end
   
-  # register an endpoint (AJAX)
+  # register an endpoint with the specified latitude and longitude
+  # [lat]: latitude
+  # [lon]: longitude
+  # TODO: how to force AJAX/XHR only?
   def create
     @endpoint = Endpoint.create(
                   :lat => params[:lat],
                   :lon => params[:lon]
                 )
     respond_to { |format|
-      format.json {render :json => ""}
+      format.json
     }
   end
 

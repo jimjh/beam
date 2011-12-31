@@ -1,3 +1,10 @@
-worry about security
+[Iteration #1]
+- report location, connect, and disconnect
+- refactor code
+
+
+- error handling (esp AJAX) and robustness
+- worry about security
   - how to control endpoints/register?
   - secure web sockets
+  - rails security?
