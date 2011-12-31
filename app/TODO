@@ -1,10 +1,11 @@
 [Iteration #1]
 - report location, connect, and disconnect
 - refactor code
-
+  - fix xhr polling errors
 
 - error handling (esp AJAX) and robustness
 - worry about security
   - how to control endpoints/register?
   - secure web sockets
   - rails security?
+http://www.tokbox.com/

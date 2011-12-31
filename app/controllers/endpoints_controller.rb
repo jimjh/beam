@@ -1,6 +1,6 @@
 class EndpointsController < ApplicationController
 
-  skip_before_filter :verify_authenticity_token, :except => [:destroy]
+  protect_from_forgery :except => :destroy, :index
   before_filter :check_access
 
   # displays a list of all endpoints
