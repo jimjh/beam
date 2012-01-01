@@ -22,8 +22,20 @@ class EndpointsController < ApplicationController
     }
   end
   
+  def update
+    @endpoint = Endpoint.find(params[:id])
+    @endpoint.lat = params[:lat]
+    @endpoint.lon = params[:lon]
+    @endpoint.save
+    respond_to { |format|
+      format.json
+    }
+  end
+  
   # displays details of the specified endpoint
   # [id]: UUID of endpoint to show
+  #--
+  # TODO: can I remove this?
   def show
     @endpoint = Endpoint.find(params[:id])
     respond_to { |format|
@@ -41,6 +53,7 @@ class EndpointsController < ApplicationController
   # register an endpoint with the specified latitude and longitude
   # [lat]: latitude
   # [lon]: longitude
+  #--
   # TODO: how to force AJAX/XHR only?
   def create
     @endpoint = Endpoint.create(

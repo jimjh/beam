@@ -1,11 +1,43 @@
 [Iteration #1]
-- report location, connect, and disconnect
-- refactor code
-  - fix xhr polling errors
++ report location, connect, and disconnect
++ refactor code
+  ? fix xhr polling errors
+  + break up web.js to modules
 
+[Iteration #2]
+- store endpoint UUID in cookie
+  - if available, reuse
+  - otherwise, request
+  
+  onload -> is uuid available? -> yes -> update coords in endpoint
+                 |                                |
+                 |-> no -> create new endpoint    |
+                                  |               |
+                                  v               |
+                           create new cookie  ->  |
+                                                  v
+                                          register websocket
+                                          
+- document javascript, run through closure compiler
+
+[Iteration #3]
+- 
+
+- optimization? benchmarks?
+- enable other transports?
 - error handling (esp AJAX) and robustness
+  - at every layer!
+  - client JS
+  - rails
+  - node JS
+- update location after certain interval?
+- user ID?
 - worry about security
   - how to control endpoints/register?
   - secure web sockets
   - rails security?
 http://www.tokbox.com/
+- monetize
+  - SSL?
+  - transfer limits
+  - user accounts?

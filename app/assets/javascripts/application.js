@@ -6,4 +6,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery/jquery.cookie.js
 //= require socket.io.min
