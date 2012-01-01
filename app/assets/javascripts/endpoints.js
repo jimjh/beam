@@ -1,21 +1,27 @@
 /**
+ * @fileOverview This file contains functions for handling the user's location,
+ * registering endpoints, and creating web sockets.
  * @author <a href="mailto:jim@jh-lim.com">Jiunn Haur Lim</a>
  */
-
-// URL of SWF fallback
-var WEB_SOCKET_SWF_LOCATION = '/vendor/web-socket-js/WebSocketMain.swf';
  
+/**
+ * @namespace Contains functions for registering endpoints and creating web
+ * sockets.
+ */
 var Loader = function (){
 
-  // URL on app server to create endpoint
-  var ENDPOINT_CREATE_URL = '/endpoints';
-  // URL on app server to update endpoint
-  var ENDPOINT_UPDATE_URL = '/endpoints';
-  // URL on node server to register web sockets
-  var SOCKET_URL = 'http://smooth-waterfall-8178.herokuapp.com:80/';
+  /** @const URL on app server to create endpoint */
+  const ENDPOINT_CREATE_URL = '/endpoints';
+  /** @const URL on app server to update endpoint */
+  const ENDPOINT_UPDATE_URL = '/endpoints';
+  /** @const URL on node server to register web sockets */
+  const SOCKET_URL = 'http://beam-node.nodester.com/';
+  // const SOCKET_URL = 'http://smooth-waterfall-8178.herokuapp.com:80/';
   
-  var COOKIE_UUID = 'endpoint_uuid';
-  var COOKIE_OPTIONS = {expires: 365, path: '/' };
+  /** @const Name of cookie for endpoint UUID */
+  const COOKIE_UUID = 'endpoint_uuid';
+  /** @const General options for creating cookies */
+  const COOKIE_OPTIONS = {expires: 365, path: '/' };
   
   /**
    * Entry point - called when a location is retrieved.
@@ -25,6 +31,10 @@ var Loader = function (){
    * endpoint on the server with <tt>position</tt>.
    *
    * Finally, registers UUID with the websocket server.
+   *
+   * @public
+   * @param {Position} position     position returned from W3 geolocation
+   *                                functions
    */
   var init = function (position){
   
@@ -32,23 +42,34 @@ var Loader = function (){
     var endpoint_uuid = $.cookie(COOKIE_UUID);
     if (null == endpoint_uuid){
       // if not available, create and store UUID in cookie
-      endpoint_uuid =
-        create_endpoint(position, function(endpoint_uuid){
-          $.cookie(COOKIE_UUID, endpoint_uuid, COOKIE_OPTIONS);
-          register_socket(endpoint_uuid);
-        });
+      create_endpoint(position, function(endpoint_uuid){
+        $.cookie(COOKIE_UUID, endpoint_uuid, COOKIE_OPTIONS);
+        register_socket(endpoint_uuid);
+      });
     }else {
-      // update endpoint with location
-      update_endpoint(endpoint_uuid, position);
-      register_socket(endpoint_uuid);
+      // else, update endpoint with location
+      update_endpoint(endpoint_uuid, position, function(endpoint_uuid){
+        register_socket(endpoint_uuid);
+      });
     }
     
   };
   
   /**
+   * Error handler - called when geolocation fails.
+   * @public
+   */
+  var no_location = function (p){
+    p = p || "";
+    // TODO: some sort of "your browser is not supported?
+  }
+  
+  /**
    * Creates a new endpoint on the app server
-   * @param position        location coordinates
-   * @param callback        callback on XHR success
+   * @param {Position}    position        position returned from W3 geolocation
+   * @param {Coordinates} position.coords location coordinates
+   * @param {function(UUID)}
+   *                      callback        callback on XHR success
    */
   var create_endpoint = function (position, callback){
     
@@ -68,10 +89,15 @@ var Loader = function (){
   
   /**
    * Updates endpoint on app server with location coordinates
-   * @param endpoint_uuid   uuid of endpoint to update
-   * @param position        location coordinates
+   * @param {UUID}      endpoint_uuid   uuid of endpoint to update
+   * @param {Position}  position        position returned from W3 geolocation
+   * @param {Coordinates} position.coords location coordinates
+   * @param {function(UUID)}
+   *                    callback        callback on XHR success
+   * @param {Number}    retry_count     number of times this call has been retried
    */
-  var update_endpoint = function (endpoint_uuid, position, retry_count){
+  var update_endpoint = function (endpoint_uuid, position,
+                                  callback, retry_count){
   
     retry_count = retry_count || 0;
   
@@ -84,6 +110,7 @@ var Loader = function (){
       dataType: 'json',
       success: function (data, textStatus, jqXHR){
         // TODO
+        callback (endpoint_uuid);
       },
       error: function (jqXHR, textStatus, errorThrown){
       
@@ -92,7 +119,8 @@ var Loader = function (){
             (null == textStatus ||
             'timeout' == textStatus ||
             'abort' == textStatus)){
-            update_endpoint (endpoint_uuid, position, retry_count++);
+            update_endpoint (endpoint_uuid, position,
+                             callback, retry_count++);
             return;
         }
         
@@ -107,6 +135,7 @@ var Loader = function (){
   
   /**
    * Registers endpoint UUID with web sockets server
+   * @param {UUID} endpoint_uuid    UUID of endpoint associated with this user
    */
   var register_socket = function (endpoint_uuid){
     var socket = io.connect (SOCKET_URL);
@@ -116,12 +145,16 @@ var Loader = function (){
   };
   
   return {
-    init: init
+    init: init,
+    no_location: no_location
   };
   
 }();
 
 // document.ready
 $(function() {
-  navigator.geolocation.getCurrentPosition (Loader.init);
+  // do not use high accuracy -> unstable
+  if(geo_position_js.init()){
+    geo_position_js.getCurrentPosition(Loader.init, Loader.no_location);
+  }else Loader.no_location();
 });

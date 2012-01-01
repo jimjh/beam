@@ -5,9 +5,9 @@
   + break up web.js to modules
 
 [Iteration #2]
-- store endpoint UUID in cookie
-  - if available, reuse
-  - otherwise, request
++ store endpoint UUID in cookie
+  + if available, reuse
+  + otherwise, request
   
   onload -> is uuid available? -> yes -> update coords in endpoint
                  |                                |
@@ -17,11 +17,13 @@
                            create new cookie  ->  |
                                                   v
                                           register websocket
-                                          
+
+- refactor endpoints.js for error handling
 - document javascript, run through closure compiler
 
 [Iteration #3]
-- 
+- refactor web.js for error handling
+- refactor rails for error handling
 
 - optimization? benchmarks?
 - enable other transports?

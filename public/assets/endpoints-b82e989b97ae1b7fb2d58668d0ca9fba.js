@@ -1,5 +1,0 @@
-/**
- * @author <a href="mailto:jim@jh-lim.com">Jiunn Haur Lim</a>
- */
-// URL of SWF fallback
-var WEB_SOCKET_SWF_LOCATION="/vendor/web-socket-js/WebSocketMain.swf",Loader=function(){var a="/endpoints",b="/endpoints",c="http://smooth-waterfall-8178.herokuapp.com:80/",d="endpoint_uuid",e=function(a){var b=$.cookie(d);null==b?b=f(a,function(a){$.cookie(d,a,{expires:365,path:"/"}),h(a)}):(g(b,a),h(b))},f=function(b,c){$.ajax(a,{type:"post",data:{lat:b.coords.latitude,lon:b.coords.longitude},dataType:"json",success:function(a,b,d){c(a.uuid)}})},g=function(a,c){$.ajax(b+"/"+a,{type:"put",data:{lat:c.coords.latitude,lon:c.coords.longitude},dataType:"json",success:function(a,b,c){}})},h=function(a){var b=io.connect(c);b.on("connect",function(c){b.emit("set uuid",a)})};return{init:e}}();$(function(){navigator.geolocation.getCurrentPosition(Loader.init)})

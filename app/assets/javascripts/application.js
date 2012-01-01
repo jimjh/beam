@@ -6,5 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery/jquery.cookie.js
+//= require jquery/jquery.cookie
 //= require socket.io.min
+//= require geo.js
