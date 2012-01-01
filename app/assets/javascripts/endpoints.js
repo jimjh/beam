@@ -15,6 +15,7 @@ var Loader = function (){
   var SOCKET_URL = 'http://smooth-waterfall-8178.herokuapp.com:80/';
   
   var COOKIE_UUID = 'endpoint_uuid';
+  var COOKIE_OPTIONS = {expires: 365, path: '/' };
   
   /**
    * Entry point - called when a location is retrieved.
@@ -33,7 +34,7 @@ var Loader = function (){
       // if not available, create and store UUID in cookie
       endpoint_uuid =
         create_endpoint(position, function(endpoint_uuid){
-          $.cookie(COOKIE_UUID, endpoint_uuid, {expires: 365, path: '/' });
+          $.cookie(COOKIE_UUID, endpoint_uuid, COOKIE_OPTIONS);
           register_socket(endpoint_uuid);
         });
     }else {
@@ -70,7 +71,9 @@ var Loader = function (){
    * @param endpoint_uuid   uuid of endpoint to update
    * @param position        location coordinates
    */
-  var update_endpoint = function (endpoint_uuid, position){
+  var update_endpoint = function (endpoint_uuid, position, retry_count){
+  
+    retry_count = retry_count || 0;
   
     $.ajax(ENDPOINT_UPDATE_URL + '/' + endpoint_uuid, {
       type: 'put',
@@ -81,6 +84,22 @@ var Loader = function (){
       dataType: 'json',
       success: function (data, textStatus, jqXHR){
         // TODO
+      },
+      error: function (jqXHR, textStatus, errorThrown){
+      
+        // if non-fatal, just retry
+        if ((retry_count < 4) &&
+            (null == textStatus ||
+            'timeout' == textStatus ||
+            'abort' == textStatus)){
+            update_endpoint (endpoint_uuid, position, retry_count++);
+            return;
+        }
+        
+        // otherwise, delete cookie and re-initialize
+        $.cookie(COOKIE_UUID, null, COOKIE_OPTIONS);
+        init(position);
+        
       }
     });
   

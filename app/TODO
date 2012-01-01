@@ -26,10 +26,9 @@
 - optimization? benchmarks?
 - enable other transports?
 - error handling (esp AJAX) and robustness
-  - at every layer!
-  - client JS
-  - rails
-  - node JS
+  - endpoints.js
+  - endpoints_controller
+  - web.js
 - update location after certain interval?
 - user ID?
 - worry about security
