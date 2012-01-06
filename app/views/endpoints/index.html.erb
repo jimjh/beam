@@ -1,9 +1,23 @@
 <ul>
 <% @endpoints.each do |endpoint| %>
-<li>
-  <%= link_to( endpoint.to_s, endpoint,
+  <li>
+    <%= link_to( endpoint.to_s, endpoint,
                 :confirm => 'Are you sure?',
                 :method => :delete ) %>
-</li>
+  </li>
 <% end %>
 </ul>
+<!-- File Upload -->
+<form method="post"
+      id="fileupload"
+      enctype="multipart/form-data"
+      action="http://beam.s3.amazonaws.com">
+ <%= hidden_field_tag(:key, "") %>
+ <%= hidden_field_tag(:AWSAccessKeyId, "") %>
+ <%= hidden_field_tag(:acl, "private") %>
+ <%= hidden_field_tag(:success_action_status, "200") %>
+ <%= hidden_field_tag(:success_action_redirect, "200") %>
+ <%= hidden_field_tag(:policy, "") %>
+ <%= hidden_field_tag(:signature, "") %>
+ <%= file_field_tag(:file) %>
+</form>

@@ -6,6 +6,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery/jquery.cookie
-//= require socket.io.min
-//= require geo.js
+//= require plugins/tmpl.min

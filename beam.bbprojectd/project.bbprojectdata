@@ -258,6 +258,42 @@
 			<key>ItemType</key>
 			<string>FolderReference</string>
 		</dict>
+		<key>6D5F7CB3-3A6C-4E23-9A65-561635A6235B</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAHQAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJD0KnSCsAAAWwFQMLdG1wbC5taW4uanMAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAABbAVDssPGfIAAAAAAAAAAP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAAH2JsdWVpbXAtSmF2
+				YVNjcmlwdC1UZW1wIzVCMDE1MDMAABAACAAAyQ+I9wAA
+				ABEACAAAyw9gQgAAAAEAEAWwFQMADpDyAA3wnAAN8JkA
+				AgBSTWFjaW50b3NoIEhEOlVzZXJzOgBjb2RleDoARG93
+				bmxvYWRzOgBibHVlaW1wLUphdmFTY3JpcHQtVGVtcCM1
+				QjAxNTAzOgB0bXBsLm1pbi5qcwAOABgACwB0AG0AcABs
+				AC4AbQBpAG4ALgBqAHMADwAaAAwATQBhAGMAaQBuAHQA
+				bwBzAGgAIABIAEQAEgBGVXNlcnMvY29kZXgvRG93bmxv
+				YWRzL2JsdWVpbXAtSmF2YVNjcmlwdC1UZW1wbGF0ZXMt
+				ZDk5NWUxOS90bXBsLm1pbi5qcwATAAEvAAAVAAIADP//
+				AAA=
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/codex/Downloads/blueimp-JavaScript-Templates-d995e19/tmpl.min.js</string>
+				<key>RelativePath</key>
+				<string>../../../../Downloads/blueimp-JavaScript-Templates-d995e19/tmpl.min.js</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>tmpl.min.js</string>
+			<key>ItemType</key>
+			<string>FileReference</string>
+		</dict>
 		<key>76EC82BC-31E5-4736-A887-D3EBF66D3575</key>
 		<dict>
 			<key>ItemData</key>

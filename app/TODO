@@ -18,22 +18,57 @@
                                                   v
                                           register websocket
 
-- refactor endpoints.js for error handling
-- document javascript, run through closure compiler
++ refactor endpoints.js for error handling
++ document javascript
++ fix uglifier not removing comments
 
 [Iteration #3]
-- refactor web.js for error handling
-- refactor rails for error handling
++ update endpoint instead of delete
++ does jquery automatically send the CSRF token?
+  + YES!
 
+[Iteration #4]
++ file upload!
+  + get file uploader to work with S3
+- refactor locator.js and uploader.js for error handling and validations
+- refactor node.js (server.js and endpoint.js) for error handling + validations
+- refactor rails (endpoints_controller) for error handling + validations (make private?)
+
+[Iteration #5]
+- file download!
+- test in all major browsers
+  - desktop drag and drop
+  - 
+- test all kinds of transports
+
+[Iteration #6]
+- UI
+- configure uploader
+- upload limits, error messages, validation
+- cancelable uploads
+- resumable uploads
+
+[Iteration #7]
+- location filtering
+
+- make endpoints.js more robust (like Gmail)
 - optimization? benchmarks?
 - enable other transports?
+- need cron job to remove dead endpoints
+- what is nodejs goes down?
+- need cron job to clear Amazon S3
+  (how to check that no one is downloading?)
 - error handling (esp AJAX) and robustness
-  - endpoints.js
+  - locator.js and uploader.js
   - endpoints_controller
-  - web.js
+  - node.js
 - update location after certain interval?
 - user ID?
 - worry about security
+  - channels
+    - between node and rails
+    - between sender and rails and node
+    - between receiver and rails and node
   - how to control endpoints/register?
   - secure web sockets
   - rails security?
@@ -42,3 +77,7 @@ http://www.tokbox.com/
   - SSL?
   - transfer limits
   - user accounts?
+  
+localhost edits
+- endpoints.js on app -> SOCKET_URL
+- endpoint.js on node -> APP_URL and APP_PORT

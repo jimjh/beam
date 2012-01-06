@@ -1,9 +1,15 @@
+# TODO: input validation and error handling
 class EndpointsController < ApplicationController
 
-  protect_from_forgery :except => [:destroy, :index]
+  # TODO: need alternative forms of protection
+  protect_from_forgery :except => [:deactivate]
   before_filter :check_access
+  
+  # constants for :status
+  ACTIVE = '1'
+  INACTIVE = '0'
 
-  # displays a list of all endpoints
+  # Displays a list of all endpoints
   def index
     # get all endpoints
     @endpoints = Endpoint.all
@@ -12,27 +18,48 @@ class EndpointsController < ApplicationController
     }
   end
 
-  # destroys the specified endpoint
+  # Destroys the specified endpoint.
   # [id]: UUID of endpoint to delete
+  #--
+  # TODO: probably should remove
   def destroy
     @endpoint = Endpoint.find(params[:id])
     @endpoint.destroy
     respond_to { |format|
+      # TODO: json response
       format.html {redirect_to endpoints_url}
     }
   end
   
+  # Deactivates the specified endpoint.
+  # [id]: UUID of endpoint to deactivate
+  def deactivate
+    @endpoint = Endpoint.find(params[:id])
+    @endpoint.status = INACTIVE
+    @endpoint.save
+    respond_to { |format|
+      # TODO: json response
+      format.html {redirect_to endpoints_url}
+    }
+  end
+  
+  # Updates the endpoint specified by :id with the given coordinates.
+  # Status of endpoint becomes ACTIVE.
+  # [id]:   UUID of endpoint to update
+  # [lat]:  latitude
+  # [lon]:  longitude
   def update
     @endpoint = Endpoint.find(params[:id])
     @endpoint.lat = params[:lat]
     @endpoint.lon = params[:lon]
+    @endpoint.status = ACTIVE
     @endpoint.save
     respond_to { |format|
       format.json
     }
   end
   
-  # displays details of the specified endpoint
+  # Displays details of the specified endpoint
   # [id]: UUID of endpoint to show
   #--
   # TODO: can I remove this?
@@ -50,7 +77,7 @@ class EndpointsController < ApplicationController
     }
   end
   
-  # register an endpoint with the specified latitude and longitude
+  # Creates an active endpoint with the specified latitude and longitude.
   # [lat]: latitude
   # [lon]: longitude
   #--
@@ -58,7 +85,8 @@ class EndpointsController < ApplicationController
   def create
     @endpoint = Endpoint.create(
                   :lat => params[:lat],
-                  :lon => params[:lon]
+                  :lon => params[:lon],
+                  :status => ACTIVE
                 )
     respond_to { |format|
       format.json
