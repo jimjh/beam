@@ -42,7 +42,7 @@ var Uploader = function (){
           url: POLICY_CREATE_URL,
           type: 'POST',
           dataType: 'json',
-          data: {doc: {title: data.files[0].name}},
+          data: {doc: {title: data.files[0].name}, target_uuid: data.endpoint_uuid},
           async: false,
           
           // TODO: error handling and validation

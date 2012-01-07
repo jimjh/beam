@@ -20,8 +20,8 @@ var Locator = function (){
   /** @const URL on app server to update endpoint (PUT) */
   const ENDPOINT_UPDATE_URL = '/endpoints';
   /** @const URL on node server to register web sockets */
-  const SOCKET_URL = 'http://localhost:13359';
-  // const SOCKET_URL = 'http://beam-node.nodester.com/';
+  // const SOCKET_URL = 'http://localhost:13359';
+  const SOCKET_URL = 'http://beam-node.nodester.com/';
   // const SOCKET_URL = 'http://smooth-waterfall-8178.herokuapp.com:80/';
   
   /** @const Name of cookie for endpoint UUID */

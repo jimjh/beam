@@ -2,12 +2,13 @@ class UploadsController < ApplicationController
 
   # create security policy for amazon S3
   def create
+    @redirect = SOCKET_URL + '/' + params[:target_uuid]
     @document = {
       :key => params[:doc][:title],
       :policy => s3_upload_policy, 
       :signature => s3_upload_signature, 
       :aws => ENV['S3_KEY'],
-      :redirect => SUCCESS_REDIRECT
+      :redirect => @redirect
     }
     respond_to { |format|
       format.json
@@ -16,8 +17,8 @@ class UploadsController < ApplicationController
  
   private
   
-  SUCCESS_REDIRECT = ""
-  SOCKET_URL = 'http://localhost:13359'
+  SOCKET_URL = 'http://beam-node.nodester.com/transfer';
+  # SOCKET_URL = 'http://localhost:13359'
   
   # generate the policy document that amazon is expecting.
   def s3_upload_policy
@@ -28,7 +29,7 @@ class UploadsController < ApplicationController
         ["starts-with", "$key", ""],
         {"acl" => "private"},
         {"success_action_status" => "200"},
-        {"success_action_redirect"=> SUCCESS_REDIRECT},
+        {"success_action_redirect"=> @redirect},
         # TODO: limit content-length?
         ["content-length-range", 0, 1048576]
       ]
