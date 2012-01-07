@@ -36,13 +36,13 @@ var Uploader = function (){
       autoUpload: true,
       
       add: function (event, data) {
-      
         $.ajax({
         
           url: POLICY_CREATE_URL,
           type: 'POST',
           dataType: 'json',
-          data: {doc: {title: data.files[0].name}, target_uuid: data.endpoint_uuid},
+          data: {doc: {title: data.files[0].name},
+                target_uuid: data.form[0].target_uuid.value},
           async: false,
           
           // TODO: error handling and validation
