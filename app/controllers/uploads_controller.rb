@@ -17,6 +17,7 @@ class UploadsController < ApplicationController
   private
   
   SUCCESS_REDIRECT = ""
+  SOCKET_URL = 'http://localhost:13359'
   
   # generate the policy document that amazon is expecting.
   def s3_upload_policy

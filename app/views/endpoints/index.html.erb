@@ -1,23 +1,26 @@
-<ul>
+<div>
 <% @endpoints.each do |endpoint| %>
-  <li>
-    <%= link_to( endpoint.to_s, endpoint,
-                :confirm => 'Are you sure?',
-                :method => :delete ) %>
-  </li>
+  <div style="border-bottom: 1px solid black">
+  <%= link_to( endpoint.to_s, endpoint,
+              :confirm => 'Are you sure?',
+              :method => :delete ) %>
+    <!-- File Upload -->
+    <% # don't use form_tag -> generates extra stuff that Amazon doesn't like %>
+    <form method="post"
+          id="fileupload"
+          enctype="multipart/form-data"
+          action="http://beam.s3.amazonaws.com">
+     <%= hidden_field_tag(:key, "") %>
+     <%= hidden_field_tag(:AWSAccessKeyId, "") %>
+     <%= hidden_field_tag(:acl, "private") %>
+     <%= hidden_field_tag(:success_action_status, "200") %>
+     <%= hidden_field_tag(:success_action_redirect, "") %>
+     <%= hidden_field_tag(:policy, "") %>
+     <%= hidden_field_tag(:signature, "") %>
+     <!-- fields below this are ignored by Amazon S3 -->
+     <%= file_field_tag(:file) %>
+     <%= hidden_field_tag(:endpoint_uuid, endpoint.id) %>
+    </form>
+  </div>
 <% end %>
-</ul>
-<!-- File Upload -->
-<form method="post"
-      id="fileupload"
-      enctype="multipart/form-data"
-      action="http://beam.s3.amazonaws.com">
- <%= hidden_field_tag(:key, "") %>
- <%= hidden_field_tag(:AWSAccessKeyId, "") %>
- <%= hidden_field_tag(:acl, "private") %>
- <%= hidden_field_tag(:success_action_status, "200") %>
- <%= hidden_field_tag(:success_action_redirect, "200") %>
- <%= hidden_field_tag(:policy, "") %>
- <%= hidden_field_tag(:signature, "") %>
- <%= file_field_tag(:file) %>
-</form>
+</div>

@@ -30,16 +30,15 @@
 [Iteration #4]
 + file upload!
   + get file uploader to work with S3
+- file drop and send
+
+[Iteration #5]
 - refactor locator.js and uploader.js for error handling and validations
 - refactor node.js (server.js and endpoint.js) for error handling + validations
 - refactor rails (endpoints_controller) for error handling + validations (make private?)
-
-[Iteration #5]
-- file download!
 - test in all major browsers
   - desktop drag and drop
-  - 
-- test all kinds of transports
+  - test all kinds of transports
 
 [Iteration #6]
 - UI
@@ -47,6 +46,9 @@
 - upload limits, error messages, validation
 - cancelable uploads
 - resumable uploads
+- multiple uploads
+  - many recipients?
+  - many files per recipient?
 
 [Iteration #7]
 - location filtering
@@ -58,7 +60,7 @@
 - what is nodejs goes down?
 - need cron job to clear Amazon S3
   (how to check that no one is downloading?)
-- error handling (esp AJAX) and robustness
+- error handling (esp AJAX - jquery global AJAX events?) and robustness
   - locator.js and uploader.js
   - endpoints_controller
   - node.js
@@ -79,5 +81,6 @@ http://www.tokbox.com/
   - user accounts?
   
 localhost edits
-- endpoints.js on app -> SOCKET_URL
+- locator.js on app -> SOCKET_URL
 - endpoint.js on node -> APP_URL and APP_PORT
+- uploads_controller.rb -> SOCKET_URL
