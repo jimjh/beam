@@ -13,9 +13,9 @@
 			<key>AliasData</key>
 			<data>
 			AAAAAAGeAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWX0ukGYXNzZXRzAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			DzSXSCsAAAWX0ukGYXNzZXRzAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZfS
-			6ssax6QAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Fw
+			6ssauZQAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Fw
 			cAAAEAAIAADJD4j3AAAAEQAIAADLGw30AAAAAQAcBZfS6QWX0dUA
 			Dk0MAA3xLgAN8SoADfCcAA3wmQACAElNYWNpbnRvc2ggSEQ6VXNl
 			cnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVsb3BtZW50OgBXZWI6
@@ -35,9 +35,9 @@
 			<key>AliasData</key>
 			<data>
 			AAAAAAHGAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWX0uoLamF2YXNjcmlwdHMAAAAAAAAAAAAAAAAAAAAA
+			DzSXSCsAAAWX0uoLamF2YXNjcmlwdHMAAAAAAAAAAAAAAAAAAAAA
 			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZfS
-			7csax6QAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAABmFz
+			7csauZQAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAABmFz
 			c2V0cwAQAAgAAMkPiPcAAAARAAgAAMsbDfQAAAABACAFl9LqBZfS
 			6QWX0dUADk0MAA3xLgAN8SoADfCcAA3wmQACAFZNYWNpbnRvc2gg
 			SEQ6VXNlcnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVsb3BtZW50
@@ -57,83 +57,10 @@
 		<dict>
 			<key>AliasData</key>
 			<data>
-			AAAAAAHaAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWX0u0HcGx1Z2lucwAAAAAAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABa//
-			VcsspIIAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAC2ph
-			dmFzY3JpcHRzAAAQAAgAAMkPiPcAAAARAAgAAMss6tIAAAABACQF
-			l9LtBZfS6gWX0ukFl9HVAA5NDAAN8S4ADfEqAA3wnAAN8JkAAgBf
-			TWFjaW50b3NoIEhEOlVzZXJzOgBjb2RleDoARG9jdW1lbnRzOgBE
-			ZXZlbG9wbWVudDoAV2ViOgBiZWFtOgBhcHA6AGFzc2V0czoAamF2
-			YXNjcmlwdHM6AHBsdWdpbnMAAA4AEAAHAHAAbAB1AGcAaQBuAHMA
-			DwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgBJVXNlcnMv
-			Y29kZXgvRG9jdW1lbnRzL0RldmVsb3BtZW50L1dlYi9iZWFtL2Fw
-			cC9hc3NldHMvamF2YXNjcmlwdHMvcGx1Z2lucwAAEwABLwAAFQAC
-			AAz//wAA
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/assets/javascripts/plugins/</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
-			AAAAAAICAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWv/1UNZmlsZS11cGxvYWRlcgAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABa/7
-			1MssofgAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAB3Bs
-			dWdpbnMAABAACAAAyQ+I9wAAABEACAAAyyzoSAAAAAEAKAWv/1UF
-			l9LtBZfS6gWX0ukFl9HVAA5NDAAN8S4ADfEqAA3wnAAN8JkAAgBu
-			TWFjaW50b3NoIEhEOlVzZXJzOgBjb2RleDoARG9jdW1lbnRzOgBE
-			ZXZlbG9wbWVudDoAV2ViOgBiZWFtOgBhcHA6AGFzc2V0czoAamF2
-			YXNjcmlwdHM6AHBsdWdpbnM6AGZpbGUtdXBsb2FkZXIADgAcAA0A
-			ZgBpAGwAZQAtAHUAcABsAG8AYQBkAGUAcgAPABoADABNAGEAYwBp
-			AG4AdABvAHMAaAAgAEgARAASAFdVc2Vycy9jb2RleC9Eb2N1bWVu
-			dHMvRGV2ZWxvcG1lbnQvV2ViL2JlYW0vYXBwL2Fzc2V0cy9qYXZh
-			c2NyaXB0cy9wbHVnaW5zL2ZpbGUtdXBsb2FkZXIAABMAAS8AABUA
-			AgAM//8AAA==
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/assets/javascripts/plugins/file-uploader/</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
-			AAAAAAHmAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWv/1UGanF1ZXJ5AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABajb
-			scslLAoAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAB3Bs
-			dWdpbnMAABAACAAAyQ+I9wAAABEACAAAyyVyWgAAAAEAKAWv/1UF
-			l9LtBZfS6gWX0ukFl9HVAA5NDAAN8S4ADfEqAA3wnAAN8JkAAgBn
-			TWFjaW50b3NoIEhEOlVzZXJzOgBjb2RleDoARG9jdW1lbnRzOgBE
-			ZXZlbG9wbWVudDoAV2ViOgBiZWFtOgBhcHA6AGFzc2V0czoAamF2
-			YXNjcmlwdHM6AHBsdWdpbnM6AGpxdWVyeQAADgAOAAYAagBxAHUA
-			ZQByAHkADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgBQ
-			VXNlcnMvY29kZXgvRG9jdW1lbnRzL0RldmVsb3BtZW50L1dlYi9i
-			ZWFtL2FwcC9hc3NldHMvamF2YXNjcmlwdHMvcGx1Z2lucy9qcXVl
-			cnkAEwABLwAAFQACAAz//wAA
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/assets/javascripts/plugins/jquery/</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
 			AAAAAAGwAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWX0ukLY29udHJvbGxlcnMAAAAAAAAAAAAAAAAAAAAA
+			DzSXSCsAAAWX0ukLY29udHJvbGxlcnMAAAAAAAAAAAAAAAAAAAAA
 			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZfS
-			8csax6QAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Fw
+			8csauZQAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Fw
 			cAAAEAAIAADJD4j3AAAAEQAIAADLGw30AAAAAQAcBZfS6QWX0dUA
 			Dk0MAA3xLgAN8SoADfCcAA3wmQACAE5NYWNpbnRvc2ggSEQ6VXNl
 			cnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVsb3BtZW50OgBXZWI6
@@ -154,9 +81,9 @@
 			<key>AliasData</key>
 			<data>
 			AAAAAAGYAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWX0ukFdmlld3MAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			DzSXSCsAAAWX0ukFdmlld3MAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZfS
-			98sax6QAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Fw
+			98sauZQAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Fw
 			cAAAEAAIAADJD4j3AAAAEQAIAADLGw30AAAAAQAcBZfS6QWX0dUA
 			Dk0MAA3xLgAN8SoADfCcAA3wmQACAEhNYWNpbnRvc2ggSEQ6VXNl
 			cnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVsb3BtZW50OgBXZWI6
@@ -176,9 +103,9 @@
 			<key>AliasData</key>
 			<data>
 			AAAAAAG8AAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWX0vcJZW5kcG9pbnRzAAAAAAAAAAAAAAAAAAAAAAAA
+			DzSXSCsAAAWX0vcJZW5kcG9pbnRzAAAAAAAAAAAAAAAAAAAAAAAA
 			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaH/
-			QsseruMAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAABXZp
+			QsseoNMAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAABXZp
 			ZXdzAAAQAAgAAMkPiPcAAAARAAgAAMse9TMAAAABACAFl9L3BZfS
 			6QWX0dUADk0MAA3xLgAN8SoADfCcAA3wmQACAFNNYWNpbnRvc2gg
 			SEQ6VXNlcnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVsb3BtZW50
@@ -195,6 +122,29 @@
 			<key>Version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAG0AAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			DzSXSCsAAAWX0vcHdXBsb2FkcwAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbA0
+			Tsssy1oAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAABXZp
+			ZXdzAAAQAAgAAMkPiPcAAAARAAgAAMstH7oAAAABACAFl9L3BZfS
+			6QWX0dUADk0MAA3xLgAN8SoADfCcAA3wmQACAFFNYWNpbnRvc2gg
+			SEQ6VXNlcnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVsb3BtZW50
+			OgBXZWI6AGJlYW06AGFwcDoAdmlld3M6AHVwbG9hZHMAAA4AEAAH
+			AHUAcABsAG8AYQBkAHMADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgA
+			IABIAEQAEgA8VXNlcnMvY29kZXgvRG9jdW1lbnRzL0RldmVsb3Bt
+			ZW50L1dlYi9iZWFtL2FwcC92aWV3cy91cGxvYWRzABMAAS8AABUA
+			AgAM//8AAA==
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/views/uploads/</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<string>BB4BC9B2-A1D3-42D3-9A83-C5BA4F362B52</string>
 	</array>
 	<key>FileFilterID:codex</key>
@@ -204,61 +154,10 @@
 		<dict>
 			<key>AliasData</key>
 			<data>
-			AAAAAAHQAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWwFQMLdG1wbC5taW4uanMAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbAV
-			DssPGfIAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAH2Js
-			dWVpbXAtSmF2YVNjcmlwdC1UZW1wIzVCMDE1MDMAABAACAAAyQ+I
-			9wAAABEACAAAyw9gQgAAAAEAEAWwFQMADpDyAA3wnAAN8JkAAgBS
-			TWFjaW50b3NoIEhEOlVzZXJzOgBjb2RleDoARG93bmxvYWRzOgBi
-			bHVlaW1wLUphdmFTY3JpcHQtVGVtcCM1QjAxNTAzOgB0bXBsLm1p
-			bi5qcwAOABgACwB0AG0AcABsAC4AbQBpAG4ALgBqAHMADwAaAAwA
-			TQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgBGVXNlcnMvY29kZXgv
-			RG93bmxvYWRzL2JsdWVpbXAtSmF2YVNjcmlwdC1UZW1wbGF0ZXMt
-			ZDk5NWUxOS90bXBsLm1pbi5qcwATAAEvAAAVAAIADP//AAA=
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/codex/Downloads/blueimp-JavaScript-Templates-d995e19/tmpl.min.js</string>
-			<key>RelativePath</key>
-			<string>../../../../Downloads/blueimp-JavaScript-Templates-d995e19/tmpl.min.js</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
-			AAAAAAHsAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWX0u0MZW5kcG9pbnRzLmpzAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbAU
-			L8sqI6VURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAC2ph
-			dmFzY3JpcHRzAAAQAAgAAMkPiPcAAAARAAgAAMsqafUAAAABACQF
-			l9LtBZfS6gWX0ukFl9HVAA5NDAAN8S4ADfEqAA3wnAAN8JkAAgBk
-			TWFjaW50b3NoIEhEOlVzZXJzOgBjb2RleDoARG9jdW1lbnRzOgBE
-			ZXZlbG9wbWVudDoAV2ViOgBiZWFtOgBhcHA6AGFzc2V0czoAamF2
-			YXNjcmlwdHM6AGVuZHBvaW50cy5qcwAOABoADABlAG4AZABwAG8A
-			aQBuAHQAcwAuAGoAcwAPABoADABNAGEAYwBpAG4AdABvAHMAaAAg
-			AEgARAASAE5Vc2Vycy9jb2RleC9Eb2N1bWVudHMvRGV2ZWxvcG1l
-			bnQvV2ViL2JlYW0vYXBwL2Fzc2V0cy9qYXZhc2NyaXB0cy9lbmRw
-			b2ludHMuanMAEwABLwAAFQACAAz//wAA
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/assets/javascripts/endpoints.js</string>
-			<key>RelativePath</key>
-			<string>./app/assets/javascripts/endpoints.js</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
 			AAAAAAHqAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWX0u0LdXBsb2FkZXIuanMAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbAR
-			qMsspSdURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAC2ph
+			DzSXSCsAAAWX0u0LdXBsb2FkZXIuanMAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbB9
+			8MsslxdURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAC2ph
 			dmFzY3JpcHRzAAAQAAgAAMkPiPcAAAARAAgAAMss63cAAAABACQF
 			l9LtBZfS6gWX0ukFl9HVAA5NDAAN8S4ADfEqAA3wnAAN8JkAAgBj
 			TWFjaW50b3NoIEhEOlVzZXJzOgBjb2RleDoARG9jdW1lbnRzOgBE
@@ -281,26 +180,24 @@
 		<dict>
 			<key>AliasData</key>
 			<data>
-			AAAAAAI6AAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWo27EXanF1ZXJ5LXVpLTEuOC4xNi5taW4uanMAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABa7v
-			6cqLa14AAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAABmpx
-			dWVyeQAQAAgAAMkPiPcAAAARAAgAAMqLo54AAAABACwFqNuxBa//
-			VQWX0u0Fl9LqBZfS6QWX0dUADk0MAA3xLgAN8SoADfCcAA3wmQAC
-			AIBNYWNpbnRvc2ggSEQ6VXNlcnM6AGNvZGV4OgBEb2N1bWVudHM6
-			AERldmVsb3BtZW50OgBXZWI6AGJlYW06AGFwcDoAYXNzZXRzOgBq
-			YXZhc2NyaXB0czoAcGx1Z2luczoAanF1ZXJ5OgBqcXVlcnktdWkt
-			MS44LjE2Lm1pbi5qcwAOADAAFwBqAHEAdQBlAHIAeQAtAHUAaQAt
-			ADEALgA4AC4AMQA2AC4AbQBpAG4ALgBqAHMADwAaAAwATQBhAGMA
-			aQBuAHQAbwBzAGgAIABIAEQAEgBoVXNlcnMvY29kZXgvRG9jdW1l
-			bnRzL0RldmVsb3BtZW50L1dlYi9iZWFtL2FwcC9hc3NldHMvamF2
-			YXNjcmlwdHMvcGx1Z2lucy9qcXVlcnkvanF1ZXJ5LXVpLTEuOC4x
-			Ni5taW4uanMAEwABLwAAFQACAAz//wAA
+			AAAAAAHkAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			DzSXSCsAAAWX0u0KbG9jYXRvci5qcwAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbBX
+			QMseoNNURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAC2ph
+			dmFzY3JpcHRzAAAQAAgAAMkPiPcAAAARAAgAAMse9TMAAAABACQF
+			l9LtBZfS6gWX0ukFl9HVAA5NDAAN8S4ADfEqAA3wnAAN8JkAAgBi
+			TWFjaW50b3NoIEhEOlVzZXJzOgBjb2RleDoARG9jdW1lbnRzOgBE
+			ZXZlbG9wbWVudDoAV2ViOgBiZWFtOgBhcHA6AGFzc2V0czoAamF2
+			YXNjcmlwdHM6AGxvY2F0b3IuanMADgAWAAoAbABvAGMAYQB0AG8A
+			cgAuAGoAcwAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAAS
+			AExVc2Vycy9jb2RleC9Eb2N1bWVudHMvRGV2ZWxvcG1lbnQvV2Vi
+			L2JlYW0vYXBwL2Fzc2V0cy9qYXZhc2NyaXB0cy9sb2NhdG9yLmpz
+			ABMAAS8AABUAAgAM//8AAA==
 			</data>
 			<key>FileURL</key>
-			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/assets/javascripts/plugins/jquery/jquery-ui-1.8.16.min.js</string>
+			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/assets/javascripts/locator.js</string>
 			<key>RelativePath</key>
-			<string>./app/assets/javascripts/plugins/jquery/jquery-ui-1.8.16.min.js</string>
+			<string>./app/assets/javascripts/locator.js</string>
 			<key>TypeID</key>
 			<string>_CFileLocator</string>
 			<key>Version</key>
@@ -309,25 +206,130 @@
 		<dict>
 			<key>AliasData</key>
 			<data>
-			AAAAAAIgAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWo27EQanF1ZXJ5LmNvb2tpZS5qcwAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABajb
-			ZsrW7QgAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAABmpx
-			dWVyeQAQAAgAAMkPiPcAAAARAAgAAMrXJUgAAAABACwFqNuxBa//
-			VQWX0u0Fl9LqBZfS6QWX0dUADk0MAA3xLgAN8SoADfCcAA3wmQAC
-			AHlNYWNpbnRvc2ggSEQ6VXNlcnM6AGNvZGV4OgBEb2N1bWVudHM6
-			AERldmVsb3BtZW50OgBXZWI6AGJlYW06AGFwcDoAYXNzZXRzOgBq
-			YXZhc2NyaXB0czoAcGx1Z2luczoAanF1ZXJ5OgBqcXVlcnkuY29v
-			a2llLmpzAAAOACIAEABqAHEAdQBlAHIAeQAuAGMAbwBvAGsAaQBl
-			AC4AagBzAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIA
-			YVVzZXJzL2NvZGV4L0RvY3VtZW50cy9EZXZlbG9wbWVudC9XZWIv
-			YmVhbS9hcHAvYXNzZXRzL2phdmFzY3JpcHRzL3BsdWdpbnMvanF1
-			ZXJ5L2pxdWVyeS5jb29raWUuanMAABMAAS8AABUAAgAM//8AAA==
+			AAAAAAHuAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			DzSXSCsAAAWh/0IOaW5kZXguaHRtbC5lcmIAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbBX
+			vcseoe1URVhUUipjaP////8AAAkgAAAAAAAAAAAAAAAAAAAACWVu
+			ZHBvaW50cwAAEAAIAADJD4j3AAAAEQAIAADLHvZNAAAAAQAkBaH/
+			QgWX0vcFl9LpBZfR1QAOTQwADfEuAA3xKgAN8JwADfCZAAIAY01h
+			Y2ludG9zaCBIRDpVc2VyczoAY29kZXg6AERvY3VtZW50czoARGV2
+			ZWxvcG1lbnQ6AFdlYjoAYmVhbToAYXBwOgB2aWV3czoAZW5kcG9p
+			bnRzOgBpbmRleC5odG1sLmVyYgAADgAeAA4AaQBuAGQAZQB4AC4A
+			aAB0AG0AbAAuAGUAcgBiAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBo
+			ACAASABEABIATVVzZXJzL2NvZGV4L0RvY3VtZW50cy9EZXZlbG9w
+			bWVudC9XZWIvYmVhbS9hcHAvdmlld3MvZW5kcG9pbnRzL2luZGV4
+			Lmh0bWwuZXJiAAATAAEvAAAVAAIADP//AAA=
 			</data>
 			<key>FileURL</key>
-			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/assets/javascripts/plugins/jquery/jquery.cookie.js</string>
+			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/views/endpoints/index.html.erb</string>
 			<key>RelativePath</key>
-			<string>./app/assets/javascripts/plugins/jquery/jquery.cookie.js</string>
+			<string>./app/views/endpoints/index.html.erb</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAHwAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			DzSXSCsAAAWh/0IPY3JlYXRlLmpzb24uZXJiAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABagx
+			vMsj2wFURVhUUipjaP////8AAAkgAAAAAAAAAAAAAAAAAAAACWVu
+			ZHBvaW50cwAAEAAIAADJD4j3AAAAEQAIAADLJC9hAAAAAQAkBaH/
+			QgWX0vcFl9LpBZfR1QAOTQwADfEuAA3xKgAN8JwADfCZAAIAZE1h
+			Y2ludG9zaCBIRDpVc2VyczoAY29kZXg6AERvY3VtZW50czoARGV2
+			ZWxvcG1lbnQ6AFdlYjoAYmVhbToAYXBwOgB2aWV3czoAZW5kcG9p
+			bnRzOgBjcmVhdGUuanNvbi5lcmIADgAgAA8AYwByAGUAYQB0AGUA
+			LgBqAHMAbwBuAC4AZQByAGIADwAaAAwATQBhAGMAaQBuAHQAbwBz
+			AGgAIABIAEQAEgBOVXNlcnMvY29kZXgvRG9jdW1lbnRzL0RldmVs
+			b3BtZW50L1dlYi9iZWFtL2FwcC92aWV3cy9lbmRwb2ludHMvY3Jl
+			YXRlLmpzb24uZXJiABMAAS8AABUAAgAM//8AAA==
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/views/endpoints/create.json.erb</string>
+			<key>RelativePath</key>
+			<string>./app/views/endpoints/create.json.erb</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAIOAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			DzSXSCsAAAWX0vEZYXBwbGljYXRpb25fY29udHJvbGxlci5yYgAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZfS
+			8ssauZQAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAC2Nv
+			bnRyb2xsZXJzAAAQAAgAAMkPiPcAAAARAAgAAMsbDfQAAAABACAF
+			l9LxBZfS6QWX0dUADk0MAA3xLgAN8SoADfCcAA3wmQACAGlNYWNp
+			bnRvc2ggSEQ6VXNlcnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVs
+			b3BtZW50OgBXZWI6AGJlYW06AGFwcDoAY29udHJvbGxlcnM6AGFw
+			cGxpY2F0aW9uX2NvbnRyb2xsZXIucmIAAA4ANAAZAGEAcABwAGwA
+			aQBjAGEAdABpAG8AbgBfAGMAbwBuAHQAcgBvAGwAbABlAHIALgBy
+			AGIADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgBUVXNl
+			cnMvY29kZXgvRG9jdW1lbnRzL0RldmVsb3BtZW50L1dlYi9iZWFt
+			L2FwcC9jb250cm9sbGVycy9hcHBsaWNhdGlvbl9jb250cm9sbGVy
+			LnJiABMAAS8AABUAAgAM//8AAA==
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/controllers/application_controller.rb</string>
+			<key>RelativePath</key>
+			<string>./app/controllers/application_controller.rb</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAH+AAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			DzSXSCsAAAWX0vEVdXBsb2Fkc19jb250cm9sbGVyLnJiAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbBX
+			78ssqtZURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAC2Nv
+			bnRyb2xsZXJzAAAQAAgAAMkPiPcAAAARAAgAAMss/zYAAAABACAF
+			l9LxBZfS6QWX0dUADk0MAA3xLgAN8SoADfCcAA3wmQACAGVNYWNp
+			bnRvc2ggSEQ6VXNlcnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVs
+			b3BtZW50OgBXZWI6AGJlYW06AGFwcDoAY29udHJvbGxlcnM6AHVw
+			bG9hZHNfY29udHJvbGxlci5yYgAADgAsABUAdQBwAGwAbwBhAGQA
+			cwBfAGMAbwBuAHQAcgBvAGwAbABlAHIALgByAGIADwAaAAwATQBh
+			AGMAaQBuAHQAbwBzAGgAIABIAEQAEgBQVXNlcnMvY29kZXgvRG9j
+			dW1lbnRzL0RldmVsb3BtZW50L1dlYi9iZWFtL2FwcC9jb250cm9s
+			bGVycy91cGxvYWRzX2NvbnRyb2xsZXIucmIAEwABLwAAFQACAAz/
+			/wAA
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/controllers/uploads_controller.rb</string>
+			<key>RelativePath</key>
+			<string>./app/controllers/uploads_controller.rb</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAHqAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			DzSXSCsAAAWwNE4PY3JlYXRlLmpzb24uZXJiAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbA8
+			88ssy2NURVhUUipjaP////8AAAkgAAAAAAAAAAAAAAAAAAAAB3Vw
+			bG9hZHMAABAACAAAyQ+I9wAAABEACAAAyy0fwwAAAAEAJAWwNE4F
+			l9L3BZfS6QWX0dUADk0MAA3xLgAN8SoADfCcAA3wmQACAGJNYWNp
+			bnRvc2ggSEQ6VXNlcnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVs
+			b3BtZW50OgBXZWI6AGJlYW06AGFwcDoAdmlld3M6AHVwbG9hZHM6
+			AGNyZWF0ZS5qc29uLmVyYgAOACAADwBjAHIAZQBhAHQAZQAuAGoA
+			cwBvAG4ALgBlAHIAYgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAg
+			AEgARAASAExVc2Vycy9jb2RleC9Eb2N1bWVudHMvRGV2ZWxvcG1l
+			bnQvV2ViL2JlYW0vYXBwL3ZpZXdzL3VwbG9hZHMvY3JlYXRlLmpz
+			b24uZXJiABMAAS8AABUAAgAM//8AAA==
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/views/uploads/create.json.erb</string>
+			<key>RelativePath</key>
+			<string>./app/views/uploads/create.json.erb</string>
 			<key>TypeID</key>
 			<string>_CFileLocator</string>
 			<key>Version</key>
@@ -337,9 +339,9 @@
 			<key>AliasData</key>
 			<data>
 			AAAAAAGWAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWX0ukEVE9ETwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbAS
-			3ssieaJURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Fw
+			DzSXSCsAAAWX0ukEVE9ETwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbBM
+			Lssia5JURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Fw
 			cAAAEAAIAADJD4j3AAAAEQAIAADLIr/yAAAAAQAcBZfS6QWX0dUA
 			Dk0MAA3xLgAN8SoADfCcAA3wmQACAEdNYWNpbnRvc2ggSEQ6VXNl
 			cnM6AGNvZGV4OgBEb2N1bWVudHM6AERldmVsb3BtZW50OgBXZWI6
@@ -357,35 +359,6 @@
 			<key>Version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
-			AAAAAAJSAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			D0KnSCsAAAWv+9QXanF1ZXJ5Lnhkci10cmFuc3BvcnQuanMAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABa/7
-			58shxioAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAADWZp
-			bGUtdXBsb2FkZXIAABAACAAAyQ+I9wAAABEACAAAyyIMegAAAAEA
-			LAWv+9QFr/9VBZfS7QWX0uoFl9LpBZfR1QAOTQwADfEuAA3xKgAN
-			8JwADfCZAAIAh01hY2ludG9zaCBIRDpVc2VyczoAY29kZXg6AERv
-			Y3VtZW50czoARGV2ZWxvcG1lbnQ6AFdlYjoAYmVhbToAYXBwOgBh
-			c3NldHM6AGphdmFzY3JpcHRzOgBwbHVnaW5zOgBmaWxlLXVwbG9h
-			ZGVyOgBqcXVlcnkueGRyLXRyYW5zcG9ydC5qcwAADgAwABcAagBx
-			AHUAZQByAHkALgB4AGQAcgAtAHQAcgBhAG4AcwBwAG8AcgB0AC4A
-			agBzAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIAb1Vz
-			ZXJzL2NvZGV4L0RvY3VtZW50cy9EZXZlbG9wbWVudC9XZWIvYmVh
-			bS9hcHAvYXNzZXRzL2phdmFzY3JpcHRzL3BsdWdpbnMvZmlsZS11
-			cGxvYWRlci9qcXVlcnkueGRyLXRyYW5zcG9ydC5qcwAAEwABLwAA
-			FQACAAz//wAA
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/codex/Documents/Development/Web/beam/app/assets/javascripts/plugins/file-uploader/jquery.xdr-transport.js</string>
-			<key>RelativePath</key>
-			<string>./app/assets/javascripts/plugins/file-uploader/jquery.xdr-transport.js</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>ShowInvisibles:codex</key>
 	<false/>
@@ -398,6 +371,6 @@
 	<key>ViewSplitterPosition:codex</key>
 	<real>0.32071900367736816</real>
 	<key>WindowFrame:codex:displays([(0, 0), (1440, 900)])</key>
-	<string>rect(44,96,866,1153)</string>
+	<string>rect(48,48,870,1105)</string>
 </dict>
 </plist>

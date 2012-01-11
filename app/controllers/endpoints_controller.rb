@@ -79,7 +79,7 @@ class EndpointsController < ApplicationController
   
   # Creates an active endpoint with the specified latitude and longitude.
   # [lat]: latitude
-  # [lon]: longitude
+  # [lon]: longitude  
   #--
   # TODO: how to force AJAX/XHR only?
   def create

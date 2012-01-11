@@ -36,6 +36,8 @@ var Uploader = function (){
       autoUpload: true,
       
       add: function (event, data) {
+      
+        console.log (data);
         $.ajax({
         
           url: POLICY_CREATE_URL,
