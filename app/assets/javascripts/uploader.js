@@ -36,15 +36,14 @@ var Uploader = function (){
       autoUpload: true,
       
       add: function (event, data) {
-      
-        console.log (data);
+
         $.ajax({
         
           url: POLICY_CREATE_URL,
           type: 'POST',
           dataType: 'json',
           data: {doc: {title: data.files[0].name},
-                target_uuid: data.form[0].target_uuid.value},
+                target_uuid: $(data.form[0]).data("target-uuid")},
           async: false,
           
           // TODO: error handling and validation
@@ -74,7 +73,6 @@ var Uploader = function (){
       fail: function(e, data) {
         // TODO
         console.log('fail');
-        console.log(data);
       },
       
       done: function (event, data) {
