@@ -53,6 +53,7 @@
 [Iteration #7]
 - location filtering
 - security controls
+- overwriting file names
 
 - make endpoints.js more robust (like Gmail)
 - optimization? benchmarks?
