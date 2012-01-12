@@ -14,8 +14,8 @@ var x = 0;
  
 var Uploader = function (){
 
-  /** @const ID of hook for fileupload plugin */
-  const HOOK_ID = "#fileupload";
+  /** @const Selector for forms that use fileupload plugin */
+  const FORM_SELECTOR = ".fileupload";
   
   /** @const URL to create a new Amazon upload policy */
   const POLICY_CREATE_URL = "/uploads";
@@ -27,15 +27,17 @@ var Uploader = function (){
    */
   var init = function (){
   
-    var hook = $(HOOK_ID);
+    var forms = $(FORM_SELECTOR);
     
     // initialize
-    hook.fileupload ({
+    forms.fileupload ({
     
       forceIframeTransport: true,
       autoUpload: true,
       
       add: function (event, data) {
+
+        var form = $(data.form[0]);
 
         $.ajax({
         
@@ -43,17 +45,17 @@ var Uploader = function (){
           type: 'POST',
           dataType: 'json',
           data: {doc: {title: data.files[0].name},
-                target_uuid: $(data.form[0]).data("target-uuid")},
+                target_uuid: form.data("target-uuid")},
           async: false,
           
           // TODO: error handling and validation
           success: function (doc){
     
-            $(HOOK_ID).find('input[name=key]').val(doc.key);
-            $(HOOK_ID).find('input[name=AWSAccessKeyId]').val(doc.aws);
-            $(HOOK_ID).find('input[name=success_action_redirect]').val(doc.redirect);
-            $(HOOK_ID).find('input[name=policy]').val(doc.policy);
-            $(HOOK_ID).find('input[name=signature]').val(doc.signature);
+            form.find('input[name=key]').val(doc.key);
+            form.find('input[name=AWSAccessKeyId]').val(doc.aws);
+            form.find('input[name=success_action_redirect]').val(doc.redirect);
+            form.find('input[name=policy]').val(doc.policy);
+            form.find('input[name=signature]').val(doc.signature);
             
             // submit file and policy to Amazon S3
             data.submit();
@@ -66,20 +68,15 @@ var Uploader = function (){
       
       send: function(e, data) {
         // TODO
-        console.log ("sending...");
-        // $('#loading').show();
       },
       
       fail: function(e, data) {
         // TODO
-        console.log('fail');
-      },
+      }/*,
       
       done: function (event, data) {
-        console.log ("done");
         // TODO
-        // $('#loading').hide();
-      }
+      }*/
       
     });
     

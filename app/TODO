@@ -32,9 +32,12 @@
   + get file uploader to work with S3
 + file upload and send
 - BUGS:
-  - only works for top most endpoint
   - doesn't work for non text files?
+  - only works for top most endpoint
   - presence detection doesn't work for Opera?
+  - occassional 403 from Amazon
+  - occassional stuck at node
+- index by status, filter
 
 [Iteration #5]
 - documentation

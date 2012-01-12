@@ -8,7 +8,7 @@
     <% # don't use form_tag -> generates extra stuff that Amazon doesn't like %>
     <% # each form corresponds to one target endpoint %>
     <form method="post"
-          id="fileupload"
+          class="fileupload"
           enctype="multipart/form-data"
           action="http://beam.s3.amazonaws.com"
           data-target-uuid="<%= endpoint.id %>">
