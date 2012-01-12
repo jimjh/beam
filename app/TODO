@@ -30,9 +30,14 @@
 [Iteration #4]
 + file upload!
   + get file uploader to work with S3
-- file upload and send
++ file upload and send
+- BUGS:
+  - only works for top most endpoint
+  - doesn't work for non text files?
+  - presence detection doesn't work for Opera?
 
 [Iteration #5]
+- documentation
 - refactor locator.js and uploader.js for error handling and validations
 - refactor node.js (server.js and endpoint.js) for error handling + validations
 - refactor rails (endpoints_controller) for error handling + validations (make private?)

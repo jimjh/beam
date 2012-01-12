@@ -18,6 +18,8 @@ class UploadsController < ApplicationController
   private
   
   SOCKET_URL = 'http://beam-node.nodester.com/transfer';
+  BUCKET_NAME = 'beam';
+  BUCKET_HOST = BUCKET_NAME + '.s3.amazonaws.com';
   # SOCKET_URL = 'http://localhost:13359'
   
   # generate the policy document that amazon is expecting.
@@ -25,7 +27,8 @@ class UploadsController < ApplicationController
     return @policy if @policy
     ret = {"expiration" => 5.minutes.from_now.utc.xmlschema,
       "conditions" =>  [ 
-        {"bucket" =>  "beam"}, 
+        {"bucket" =>  BUCKET_NAME}, 
+        {"Content-Type" => "binary/octet-stream"},
         ["starts-with", "$key", ""],
         {"acl" => "private"},
         {"success_action_status" => "200"},

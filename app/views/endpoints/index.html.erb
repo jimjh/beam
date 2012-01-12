@@ -12,6 +12,7 @@
           enctype="multipart/form-data"
           action="http://beam.s3.amazonaws.com"
           data-target-uuid="<%= endpoint.id %>">
+     <%= hidden_field_tag("Content-Type", "binary/octet-stream") %>
      <%= hidden_field_tag(:key, "") %>
      <%= hidden_field_tag(:AWSAccessKeyId, "") %>
      <%= hidden_field_tag(:acl, "private") %>
