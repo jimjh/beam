@@ -192,6 +192,9 @@ var Locator = function (){
     var socket = io.connect (SOCKET_URL);
     socket.on ('connect', function (data) {
       socket.emit ('set uuid', endpoint_uuid);
+      socket.on ('get file', function(headers){
+        console.log (headers);
+      });
     });
     
   };

@@ -6,6 +6,7 @@
               :method => :delete ) %>
     <!-- File Upload -->
     <% # don't use form_tag -> generates extra stuff that Amazon doesn't like %>
+    <% # each form corresponds to one target endpoint %>
     <form method="post"
           id="fileupload"
           enctype="multipart/form-data"

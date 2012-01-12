@@ -30,7 +30,7 @@
 [Iteration #4]
 + file upload!
   + get file uploader to work with S3
-- file drop and send
+- file upload and send
 
 [Iteration #5]
 - refactor locator.js and uploader.js for error handling and validations
@@ -52,6 +52,7 @@
 
 [Iteration #7]
 - location filtering
+- security controls
 
 - make endpoints.js more robust (like Gmail)
 - optimization? benchmarks?
