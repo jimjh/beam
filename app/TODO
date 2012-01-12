@@ -32,11 +32,10 @@
   + get file uploader to work with S3
 + file upload and send
 - BUGS:
-  - doesn't work for non text files?
-  - only works for top most endpoint
-  - presence detection doesn't work for Opera?
-  - occassional 403 from Amazon
-  - occassional stuck at node
+  + "Resource interpreted as Other but transferred with MIME type undefined."
+  + only works for top most endpoint (fixed -> was using element ID.)
+  + occassional 403 from Amazon (fixed by escaping signature and filename.)
+  + occassional stuck at node (fixed by sending 200 from node.)
 - index by status, filter
 
 [Iteration #5]

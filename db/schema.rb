@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120102001759) do
+ActiveRecord::Schema.define(:version => 20120112163218) do
 
   create_table "endpoints", :id => false, :force => true do |t|
     t.string   "uuid",       :limit => 36
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20120102001759) do
     t.string   "status",     :limit => 1
   end
 
+  add_index "endpoints", ["status"], :name => "status_index"
   add_index "endpoints", ["uuid"], :name => "index_endpoints_on_uuid", :unique => true
 
 end

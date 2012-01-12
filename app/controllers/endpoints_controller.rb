@@ -9,10 +9,10 @@ class EndpointsController < ApplicationController
   ACTIVE = '1'
   INACTIVE = '0'
 
-  # Displays a list of all endpoints
+  # Displays a list of all active endpoints
   def index
-    # get all endpoints
-    @endpoints = Endpoint.all
+    # get all active endpoints
+    @endpoints = Endpoint.where(:status => ACTIVE)
     respond_to { |format|
       format.html
     }
