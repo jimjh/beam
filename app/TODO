@@ -31,12 +31,15 @@
 + file upload!
   + get file uploader to work with S3
 + file upload and send
-- BUGS:
++ BUGS:
   + "Resource interpreted as Other but transferred with MIME type undefined."
   + only works for top most endpoint (fixed -> was using element ID.)
   + occassional 403 from Amazon (fixed by escaping signature and filename.)
   + occassional stuck at node (fixed by sending 200 from node.)
-- index by status, filter
++ index by status, filter
+
+[Iteration #4.5]
+- refactor code to use environment variables
 
 [Iteration #5]
 - documentation
@@ -91,5 +94,3 @@ http://www.tokbox.com/
   
 localhost edits
 - locator.js on app -> SOCKET_URL
-- endpoint.js on node -> APP_URL and APP_PORT
-- uploads_controller.rb -> SOCKET_URL

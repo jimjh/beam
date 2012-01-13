@@ -17,10 +17,9 @@ class UploadsController < ApplicationController
  
   private
   
-  SOCKET_URL = 'http://beam-node.nodester.com/transfer';
+  SOCKET_URL = ENV['BEAM_SOCKET_TRANSFER_URL'];
   BUCKET_NAME = 'beam';
   BUCKET_HOST = BUCKET_NAME + '.s3.amazonaws.com';
-  # SOCKET_URL = 'http://localhost:13359'
   
   # generate the policy document that amazon is expecting.
   def s3_upload_policy

@@ -4,7 +4,10 @@
 <head>
   <title>Beam</title>
   <script type="text/javascript">
-    var WEB_SOCKET_SWF_LOCATION = '/vendor/web-socket-js/WebSocketMain.swf';
+    /** @const URL of SWF fallback */
+    const WEB_SOCKET_SWF_LOCATION = '/vendor/web-socket-js/WebSocketMain.swf';
+    /** @const URL of node server to register web sockets */
+    const SOCKET_URL = "<%= ENV['BEAM_SOCKET_URL'] %>";
   </script>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
