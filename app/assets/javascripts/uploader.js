@@ -15,10 +15,10 @@ var x = 0;
 var Uploader = function (){
 
   /** @const Selector for forms that use fileupload plugin */
-  const FORM_SELECTOR = ".fileupload";
+  var FORM_SELECTOR = ".fileupload";
   
   /** @const URL to create a new Amazon upload policy */
-  const POLICY_CREATE_URL = "/uploads";
+  var POLICY_CREATE_URL = "/uploads";
 
   /**
    * Entry point - called when page is ready. Initializes the file upload
@@ -45,7 +45,7 @@ var Uploader = function (){
           type: 'POST',
           dataType: 'json',
           data: {doc: {title: data.files[0].name},
-                target_uuid: form.data("target-uuid")},
+                target_id: form.data("target-uuid")},
           async: false,
           
           // TODO: error handling and validation

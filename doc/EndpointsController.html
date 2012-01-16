@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: EndpointsController
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (E)</a> &raquo; 
+    
+    
+    <span class="title">EndpointsController</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: EndpointsController
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">EndpointsController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/controllers/endpoints_controller.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Endpoints Controller. Deals with creating, destroying, and deactivating
+endpoints. TODO: input validation and error handling</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Author:</h3>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Jiunn Haur Lim &lt;jim@jh-lim.com&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+  
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_access-instance_method" title="#check_access (instance method)">- (Object) <strong>check_access</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>development only: closes off this entire controller.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">- (Object) <strong>create</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates an active endpoint with the specified latitude and longitude.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deactivate-instance_method" title="#deactivate (instance method)">- (Object) <strong>deactivate</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deactivates the specified endpoint.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index-instance_method" title="#index (instance method)">- (Object) <strong>index</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Displays a list of all active endpoints.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">- (Object) <strong>update</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Updates the endpoint specified by :id with the given coordinates.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="check_access-instance_method">
+  
+    - (<tt>Object</tt>) <strong>check_access</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>development only: closes off this entire controller</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/endpoints_controller.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_access'>check_access</span>
+  <span class='id identifier rubyid_authenticate_or_request_with_http_basic'>authenticate_or_request_with_http_basic</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_user_name'>user_name</span><span class='comma'>,</span> <span class='id identifier rubyid_password'>password</span><span class='op'>|</span>
+    <span class='id identifier rubyid_user_name'>user_name</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>codex</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_password'>password</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>abc</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="create-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates an active endpoint with the specified latitude and longitude.
+[lat]: latitude [lon]: longitude   -- TODO: how to force AJAX/XHR only?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/endpoints_controller.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
+  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='const'>Endpoint</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span>
+                <span class='symbol'>:lat</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:lat</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                <span class='symbol'>:lon</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:lon</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                <span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='const'>ACTIVE</span>
+              <span class='rparen'>)</span>
+  <span class='id identifier rubyid_respond_to'>respond_to</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_json'>json</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="deactivate-instance_method">
+  
+    - (<tt>Object</tt>) <strong>deactivate</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Deactivates the specified endpoint. [id]: UUID of endpoint to deactivate</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/endpoints_controller.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_deactivate'>deactivate</span>
+  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='const'>Endpoint</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@endpoint</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='const'>Endpoint</span><span class='period'>.</span><span class='const'>INACTIVE</span>
+  <span class='ivar'>@endpoint</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+  <span class='id identifier rubyid_respond_to'>respond_to</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+    <span class='comment'># TODO: json response
+</span>    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span><span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_endpoints_url'>endpoints_url</span><span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="index-instance_method">
+  
+    - (<tt>Object</tt>) <strong>index</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Displays a list of all active endpoints</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/endpoints_controller.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
+  <span class='comment'># get all active endpoints
+</span>  <span class='ivar'>@endpoints</span> <span class='op'>=</span> <span class='const'>Endpoint</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='symbol'>:status</span> <span class='op'>=&gt;</span> <span class='const'>Endpoint</span><span class='period'>.</span><span class='const'>ACTIVE</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_respond_to'>respond_to</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="update-instance_method">
+  
+    - (<tt>Object</tt>) <strong>update</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Updates the endpoint specified by :id with the given coordinates. Status of
+endpoint becomes ACTIVE. [id]:   UUID of endpoint to update [lat]: 
+latitude [lon]:  longitude</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/endpoints_controller.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
+  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='const'>Endpoint</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@endpoint</span><span class='period'>.</span><span class='id identifier rubyid_lat'>lat</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:lat</span><span class='rbracket'>]</span>
+  <span class='ivar'>@endpoint</span><span class='period'>.</span><span class='id identifier rubyid_lon'>lon</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:lon</span><span class='rbracket'>]</span>
+  <span class='ivar'>@endpoint</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='const'>Endpoint</span><span class='period'>.</span><span class='const'>ACTIVE</span>
+  <span class='ivar'>@endpoint</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+  <span class='id identifier rubyid_respond_to'>respond_to</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_json'>json</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Thu Jan 12 20:37:22 2012 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

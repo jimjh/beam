@@ -39,16 +39,18 @@
 + index by status, filter
 
 [Iteration #4.5]
-- refactor code to use environment variables
++ refactor code to use environment variables
 
 [Iteration #5]
 - documentation
-- refactor locator.js and uploader.js for error handling and validations
-- refactor node.js (server.js and endpoint.js) for error handling + validations
-- refactor rails (endpoints_controller) for error handling + validations (make private?)
-- test in all major browsers
-  - desktop drag and drop
-  - test all kinds of transports
++ refactor rails (endpoints_controller) for error handling + validations (make private?)
++ refactor rails (uploads_controller) for error handling + validations (make private?)
++ refactor rails (endpoint.rb)
++ refactor endpoints_controller for session security
+  + generate endpoint ID and store in session
+  + user will use update its own endpoint via Javascript
++ refactor node.js (server.js and endpoint.js) for error handling + validations
++ refactor locator.js and uploader.js for error handling and validations
 
 [Iteration #6]
 - UI
@@ -59,25 +61,32 @@
 - multiple uploads
   - many recipients?
   - many files per recipient?
+- remove 'const' in client-side Javascript
+  
+[Iteration #6.5]
+- test in all major browsers
+  - desktop drag and drop
+- refactor endpoints_controller for session security
+  - store encrypted endpoint ID in cookie
+  - nounce for web sockets registration (or some expires number)
+  - `deactivate` should only accept connections from socket server
+- nodejs
+  - how to verify identities?
 
 [Iteration #7]
 - location filtering
-- security controls
-- overwriting file names
+- security controls at each point
+- overwriting file names -> need some unique hash?
+- unit tests
 
-- make endpoints.js more robust (like Gmail)
-- optimization? benchmarks?
-- enable other transports?
+- make locator/uploader more robust (like Gmail)
 - need cron job to remove dead endpoints
-- what is nodejs goes down?
-- need cron job to clear Amazon S3
+- need to expire files in Amazon S3
   (how to check that no one is downloading?)
-- error handling (esp AJAX - jquery global AJAX events?) and robustness
-  - locator.js and uploader.js
-  - endpoints_controller
-  - node.js
+- install exception notifier for both rails and nodejs
+- multiple tabs?
 - update location after certain interval?
-- user ID?
+- sending to missing endpoint?
 - worry about security
   - channels
     - between node and rails
@@ -85,12 +94,8 @@
     - between receiver and rails and node
   - how to control endpoints/register?
   - secure web sockets
-  - rails security?
-http://www.tokbox.com/
 - monetize
   - SSL?
   - transfer limits
   - user accounts?
-  
-localhost edits
-- locator.js on app -> SOCKET_URL
+  - facebook integration e.g. drop it to me

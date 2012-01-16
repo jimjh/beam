@@ -1,8 +1,24 @@
+# Uploads Controller.
+# Deals with security policies for Amazon S3.
+# @author Jiunn Haur Lim <jim@jh-lim.com>
 class UploadsController < ApplicationController
 
-  # create security policy for amazon S3
+  # Creates security policy for Amazon S3.
+  # - If any of the parameters are missing, return +400+
+  # - Otherwise, creates security policy and returns it in a JSON (along with
+  #   signature etc.)
+  # @params [String] target_id   ID of target endpoint
+  # @params [Map]    doc         map containing +:title+
+  # @example POST /uploads
   def create
-    @redirect = SOCKET_URL + '/' + params[:target_uuid]
+  
+    return head :bad_request if( params[:target_id].nil? or
+                                 params[:doc].nil? or
+                                 params[:doc][:title].nil? or
+                                 cookies[:endpoint_id].nil?)
+  
+    # transfer/source/target
+    @redirect = "#{SOCKET_URL}/#{cookies[:endpoint_id]}/#{params[:target_id]}"
     @document = {
       :key => params[:doc][:title],
       :policy => s3_upload_policy, 
@@ -10,18 +26,23 @@ class UploadsController < ApplicationController
       :aws => ENV['S3_KEY'],
       :redirect => @redirect
     }
+    
     respond_to { |format|
       format.json
     }
+    
   end
  
   private
   
+  # URL of web sockets server to redirect user to
   SOCKET_URL = ENV['BEAM_SOCKET_TRANSFER_URL'];
+  # Name of Amazon S3 bucket
   BUCKET_NAME = 'beam';
+  # Virtual host of Amazon S3 bucket
   BUCKET_HOST = BUCKET_NAME + '.s3.amazonaws.com';
   
-  # generate the policy document that amazon is expecting.
+  # Generate the policy document that Amazon is expecting.
   def s3_upload_policy
     return @policy if @policy
     ret = {"expiration" => 5.minutes.from_now.utc.xmlschema,
@@ -32,7 +53,7 @@ class UploadsController < ApplicationController
         {"acl" => "private"},
         {"success_action_status" => "200"},
         {"success_action_redirect"=> @redirect},
-        # TODO: limit content-length?
+        # [TODO]: limit content-length?
         ["content-length-range", 0, 1048576]
       ]
     }
@@ -40,7 +61,7 @@ class UploadsController < ApplicationController
     return @policy
   end
 
-  # sign our request by Base64 encoding the policy document.
+  # Sign our request by Base64 encoding the policy document.
   def s3_upload_signature
     signature =
       Base64.encode64(

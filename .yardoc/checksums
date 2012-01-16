@@ -1,0 +1,6 @@
+app/models/endpoint.rb b88fff130bed9e77886e81d78f441ac3cd397a62
+app/helpers/endpoints_helper.rb ee66a0edc235cde95d5194603ecf49b8f8b1adb2
+app/helpers/application_helper.rb eef3d3adce96afe8b14c19b6135323f47543d979
+app/controllers/uploads_controller.rb 5fc69df15a0f4f455275ab8a0e2b8f5c43500480
+app/controllers/endpoints_controller.rb 6b7d6963ba8b072276de4a8919cb7d836c4b7d53
+app/controllers/application_controller.rb 2036468398e54b3fc8af23cb6f9e1716293320eb

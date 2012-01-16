@@ -16,23 +16,20 @@ var x = 0;
 var Locator = function (){
 
   /** @const URL on app server to create endpoint (POST) */
-  const ENDPOINT_CREATE_URL = '/endpoints';
+  var ENDPOINT_CREATE_URL = '/endpoints';
   /** @const URL on app server to update endpoint (PUT) */
-  const ENDPOINT_UPDATE_URL = '/endpoints';
+  var ENDPOINT_UPDATE_URL = '/endpoints';
+  /** @const Name of cookie where we store our endpoint ID */
+  var COOKIE_UUID = 'endpoint_id';
   
-  /** @const Name of cookie for endpoint UUID */
-  const COOKIE_UUID = 'endpoint_uuid';
-  /** @const General options for creating cookies */
-  const COOKIE_OPTIONS = {expires: 365, path: '/' };
+  /** @const Name of event for registering UUID */
+  var EVT_SET_UUID = 'set uuid';
+  /** @const Name of event for file download notification */
+  var EVT_GET_FILE = 'get file';
   
   /**
-   * Entry point - called when a location is retrieved.
-   *
-   * Checks if an endpoint UUID is available in the cookie. If available,
-   * updates the server with <tt>position</tt>; otherwise, creates a new
-   * endpoint on the server with <tt>position</tt>.
-   *
-   * Finally, registers UUID with the websocket server.
+   * Entry point - called when a location is retrieved. Updates server
+   * with <tt>position</tt> and registers UUID with the websocket server.
    *
    * @public
    * @param {Position} position     position returned from W3 geolocation
@@ -44,21 +41,21 @@ var Locator = function (){
       no_location();    // defensively protect against bogus calls
       return;
     }
-  
-    // checks if the UUID is available in the cookie
+    
     var endpoint_uuid = $.cookie(COOKIE_UUID);
+    
     if (!endpoint_uuid){
-      // if not available, create and store UUID in cookie
-      create_endpoint(position, function(endpoint_uuid){
-        $.cookie(COOKIE_UUID, endpoint_uuid, COOKIE_OPTIONS);
-        register_socket(endpoint_uuid);
-      });
-    }else {
-      // else, update endpoint with location
-      update_endpoint(endpoint_uuid, position, function(endpoint_uuid){
-        register_socket(endpoint_uuid);
-      });
+      // TODO: ask user to enable cookies
+      console.log ("Missing cookie!");
+      return;
     }
+    
+    // update endpoint with location
+    update_endpoint(endpoint_uuid, position, function(){
+      // server may have changed endpoint ID
+      var endpoint_uuid = $.cookie(COOKIE_UUID);
+      if (endpoint_uuid) register_socket(endpoint_uuid);
+    });
     
   };
   
@@ -72,54 +69,11 @@ var Locator = function (){
   }
   
   /**
-   * Creates a new endpoint on the app server.
-   * @param {Position}    position        position returned from W3 geolocation
-   * @param {Coordinates} position.coords location coordinates
-   * @param {function(UUID)}
-   *                      callback        callback on XHR success
-   */
-  var create_endpoint = function (position, callback){
-    
-    if (!position || !callback){
-      // stomp our feet and cry - we will at least get a "console is not defined."
-      console.log ("position and callback may not be undefined/null.");
-      return;
-    }
-    
-    var error_handler =
-      function (jqXHR, textStatus, errorThrown){
-        // TODO: generic network health indicator
-      };
-    
-    var success_handler =
-      function (data, textStatus, jqXHR){
-        // validate data from server
-        if (!data || !data.uuid){
-          error_handler (jqXHR, textStatus);
-        }
-        // execute callback if everything OK
-        callback(data.uuid);
-      };
-    
-    $.ajax(ENDPOINT_CREATE_URL, {
-      type: 'post',
-      data: {
-        lat: position.coords.latitude,
-        lon: position.coords.longitude
-      },
-      dataType: 'json',
-      success: success_handler,
-      error: error_handler
-    });
-  
-  };
-  
-  /**
    * Updates endpoint on app server with location coordinates
    * @param {UUID}      endpoint_uuid   uuid of endpoint to update
    * @param {Position}  position        position returned from W3 geolocation
    * @param {Coordinates} position.coords location coordinates
-   * @param {function(UUID)}
+   * @param {function()}
    *                    callback        callback on XHR success
    * @param {Number}    retry_count     number of times this call has been retried
    */
@@ -149,15 +103,13 @@ var Locator = function (){
             return;
         }
         
-        // otherwise, delete cookie and re-initialize
-        $.cookie(COOKIE_UUID, null, COOKIE_OPTIONS);
-        init(position);
+        // TODO: random retries like Gmail
         
       };
       
     var success_handler = 
       function (data, textStatus, jqXHR){
-        callback (endpoint_uuid);
+        callback ();
       };
   
     $.ajax(ENDPOINT_UPDATE_URL + '/' + endpoint_uuid, {
@@ -166,7 +118,6 @@ var Locator = function (){
         lat: position.coords.latitude,
         lon: position.coords.longitude
       },
-      dataType: 'json',
       success: success_handler,
       error: error_handler
     });
@@ -188,9 +139,9 @@ var Locator = function (){
     var socket = io.connect (SOCKET_URL);
     socket.on ('connect', function (data) {
     
-      socket.emit ('set uuid', endpoint_uuid);
+      socket.emit (EVT_SET_UUID, endpoint_uuid);
       
-      socket.on ('get file', function(query){
+      socket.on (EVT_GET_FILE, function(query){
         console.log (query);
         $('<iframe style="display:none;"></iframe>')
           .prop('src', query)
