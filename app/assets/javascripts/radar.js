@@ -17,6 +17,12 @@ var Radar = function (){
   var EVT_NEIGHBOR_ARRIVED = "neighbor arrived";
   /** @const Name of event for a leaving neighbor */
   var EVT_NEIGHBOR_LEFT =  "neighbor left";
+  
+  var NODE_TMPL = 'node-tmpl';
+  var NODE_CONTAINER = '#node-container';
+  
+  /** @const Selector for forms that use fileupload plugin */
+  var FORM_SELECTOR = ".fileupload";
 
   /**
    * Entry point - called when websockets have been registered. Listens
@@ -32,13 +38,29 @@ var Radar = function (){
     }
     
     socket.on (EVT_NEIGHBOR_ARRIVED, function(arrival){
-      var node = $(tmpl('node-tmpl', arrival));
-      Uploader.register(node);
-      node.appendTo($('#node-container'));
+    
+      if (!arrival){
+        // TODO: error handling
+        return;
+      }
+      
+      var node = $(tmpl(NODE_TMPL, arrival));
+      Uploader.register(node.find(FORM_SELECTOR));
+      node.appendTo($(NODE_CONTAINER));
+      
     });
     
     socket.on (EVT_NEIGHBOR_LEFT, function(departure){
-      console.log ("Left: " + departure.id);
+      
+      if (!departure){
+        // TODO: error handling
+        return;
+      }
+      
+      if (document.getElementById(departure.id)){
+        $('#' + departure.id).remove();
+      }
+      
     });
   
   };

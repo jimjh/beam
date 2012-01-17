@@ -1,5 +1,5 @@
 <script type="text/html" id="node-tmpl">
-<div style="border-bottom: 1px solid black">
+<div style="border-bottom: 1px solid black" id="{%= o.id %}">
   <span>{%= o.id %}</span>
   <form method="post"
         class="fileupload"
@@ -21,7 +21,7 @@
 </script>
 <div id="node-container">
 <% @endpoints.each do |endpoint| %>
-  <div style="border-bottom: 1px solid black">
+  <div style="border-bottom: 1px solid black" id="<%= endpoint.id %>">
   <%= link_to( endpoint.to_s, endpoint,
               :confirm => 'Are you sure?',
               :method => :delete ) %>
