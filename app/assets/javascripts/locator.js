@@ -148,6 +148,9 @@ var Locator = function (){
           .appendTo(document.body);
       });
       
+      // init radar
+      Radar.onConnected(socket);
+      
     });
     
   };

@@ -6,5 +6,6 @@
 //= require plugins/geo
 //= require plugins/file-uploader/jquery.iframe-transport
 //= require plugins/file-uploader/jquery.fileupload
+//= require radar
 //= require locator
 //= require uploader

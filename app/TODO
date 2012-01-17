@@ -53,6 +53,10 @@
 + refactor locator.js and uploader.js for error handling and validations
 
 [Iteration #6]
++ remove 'const' in client-side Javascript
+- real-time nodes
+
+[Iteration #6.2]
 - UI
 - configure uploader
 - upload limits, error messages, validation
@@ -61,7 +65,6 @@
 - multiple uploads
   - many recipients?
   - many files per recipient?
-- remove 'const' in client-side Javascript
   
 [Iteration #6.5]
 - test in all major browsers
@@ -79,7 +82,8 @@
 - overwriting file names -> need some unique hash?
 - unit tests
 
-- make locator/uploader more robust (like Gmail)
+- make locator/uploader/radar more robust (like Gmail)
+  - along with error notifications
 - need cron job to remove dead endpoints
 - need to expire files in Amazon S3
   (how to check that no one is downloading?)

@@ -1,4 +1,25 @@
-<div>
+<script type="text/html" id="node-tmpl">
+<div style="border-bottom: 1px solid black">
+  <span>{%= o.id %}</span>
+  <form method="post"
+        class="fileupload"
+        enctype="multipart/form-data"
+        action="http://beam.s3.amazonaws.com"
+        data-target-uuid="{%= o.id %}">
+    <input id="Content-Type" name="Content-Type" type="hidden" value="binary/octet-stream" />
+    <input id="key" name="key" type="hidden" value="" />
+    <input id="AWSAccessKeyId" name="AWSAccessKeyId" type="hidden" value="" />
+    <input id="acl" name="acl" type="hidden" value="private" />
+    <input id="success_action_status" name="success_action_status" type="hidden" value="200" />
+    <input id="success_action_redirect" name="success_action_redirect" type="hidden" value="" />
+    <input id="policy" name="policy" type="hidden" value="" />
+    <input id="signature" name="signature" type="hidden" value="" />
+    <!-- fields below this are ignored by Amazon S3 -->
+    <input id="file" name="file" type="file" />
+  </form>
+</div>
+</script>
+<div id="node-container">
 <% @endpoints.each do |endpoint| %>
   <div style="border-bottom: 1px solid black">
   <%= link_to( endpoint.to_s, endpoint,
