@@ -42,7 +42,7 @@
 + refactor code to use environment variables
 
 [Iteration #5]
-- documentation
++ documentation
 + refactor rails (endpoints_controller) for error handling + validations (make private?)
 + refactor rails (uploads_controller) for error handling + validations (make private?)
 + refactor rails (endpoint.rb)
@@ -54,17 +54,13 @@
 
 [Iteration #6]
 + remove 'const' in client-side Javascript
-- real-time nodes
++ real-time nodes
 
 [Iteration #6.2]
 - UI
-- configure uploader
-- upload limits, error messages, validation
-- cancelable uploads
-- resumable uploads
-- multiple uploads
-  - many recipients?
-  - many files per recipient?
+  + node widget
+  - radar display (position nodes!)
+  - respond to hover, start, and done
   
 [Iteration #6.5]
 - test in all major browsers
@@ -81,9 +77,18 @@
 - security controls at each point
 - overwriting file names -> need some unique hash?
 - unit tests
-
 - make locator/uploader/radar more robust (like Gmail)
   - along with error notifications
+  
+[Iteration #8]
+- configure uploader
+- upload limits, error messages, validation
+- cancelable uploads
+- resumable uploads
+- multiple uploads
+  - many recipients?
+  - many files per recipient?
+  
 - need cron job to remove dead endpoints
 - need to expire files in Amazon S3
   (how to check that no one is downloading?)

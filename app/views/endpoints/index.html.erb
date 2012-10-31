@@ -1,5 +1,9 @@
-<script type="text/html" id="node-tmpl">
-<div style="border-bottom: 1px solid black" id="{%= o.id %}">
+<script type="text/html" id="neighbor-tmpl">
+<div  id="{%= o.id %}"
+      class="neighbor"
+      style="border-bottom: 1px solid black"
+      data-lat="{%= o.lat %}"
+      data-lon="{%= o.lon %}">
   <span>{%= o.id %}</span>
   <form method="post"
         class="fileupload"
@@ -19,9 +23,14 @@
   </form>
 </div>
 </script>
-<div id="node-container">
+<div id="neighbor-container">
 <% @endpoints.each do |endpoint| %>
-  <div style="border-bottom: 1px solid black" id="<%= endpoint.id %>">
+  <div  id="<%= endpoint.id %>"
+        class="neighbor"
+        style="border-bottom: 1px solid black"
+        data-lat="<%= endpoint.lat %>"
+        data-lon="<%= endpoint.lon %>"
+        >
   <%= link_to( endpoint.to_s, endpoint,
               :confirm => 'Are you sure?',
               :method => :delete ) %>

@@ -54,7 +54,7 @@ var Locator = function (){
     update_endpoint(endpoint_uuid, position, function(){
       // server may have changed endpoint ID
       var endpoint_uuid = $.cookie(COOKIE_UUID);
-      if (endpoint_uuid) register_socket(endpoint_uuid);
+      if (endpoint_uuid) register_socket(endpoint_uuid, position);
     });
     
   };
@@ -125,14 +125,16 @@ var Locator = function (){
   }
   
   /**
-   * Registers endpoint UUID with web sockets server
-   * @param {UUID} endpoint_uuid    UUID of endpoint associated with this user
+   * Registers endpoint UUID with web sockets server and initializes radar.
+   * @param {UUID}      endpoint_uuid     UUID of endpoint associated with this
+   *                                      user
+   * @param {Position}  position          
    */
-  var register_socket = function (endpoint_uuid){
+  var register_socket = function (endpoint_uuid, position){
   
-    if (!endpoint_uuid){
+    if (!endpoint_uuid || !position){
       // stomp our feet and cry - we will at least get a "console is not defined."
-      console.log ("endpoint_uuid may not be undefined/null.");
+      console.log ("endpoint_uuid and position may not be undefined/null.");
       return;
     }
   
@@ -149,7 +151,7 @@ var Locator = function (){
       });
       
       // init radar
-      Radar.onConnected(socket);
+      Radar.onConnected(socket, position);
       
     });
     

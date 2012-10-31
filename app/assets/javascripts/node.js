@@ -5,41 +5,40 @@
  */
 var x = 0;
 /**
- * @fileOverview This file contains functions for handling file uploads.
+ * @fileOverview Defines functions for handling node behavior and file uploads.
  */
- 
-/** 
- * @namespace Contains functions for handling file uploads.
- */
-var Uploader = function (){
 
-  /** @const Selector for forms that use fileupload plugin */
-  var FORM_SELECTOR = ".fileupload";
+var Neighbor = function(){
+
+  /** @const Name of node template */
+  var NEIGHBOR_TMPL = 'neighbor-tmpl';
   
-  /** @const URL to create a new Amazon upload policy */
+  /** @const Selector for neighbor elements */
+  var NEIGHBOR_SELECTOR = '.neighbor';
+  
+  /** @const URL on app server to request a new Amazon upload policy */
   var POLICY_CREATE_URL = "/uploads";
   
-  var FILE_UPLOAD_OPTS = {
-    
+  var FILE_UPLOAD_OPTIONS = {
+      
     forceIframeTransport: true,
     autoUpload: true,
-    
     add: function (event, data) {
-
+  
       var form = $(data.form[0]);
-
+    
       $.ajax({
       
         url: POLICY_CREATE_URL,
         type: 'POST',
         dataType: 'json',
         data: {doc: {title: data.files[0].name},
-              target_id: form.data("target-uuid")},
+              target_id: form.data('target-uuid')},
         async: false,
         
         // TODO: error handling and validation
         success: function (doc){
-  
+    
           form.find('input[name=key]').val(doc.key);
           form.find('input[name=AWSAccessKeyId]').val(doc.aws);
           form.find('input[name=success_action_redirect]').val(doc.redirect);
@@ -68,36 +67,56 @@ var Uploader = function (){
     }
     
   };
+  
+  /**
+   * Retrieves an array of DOM elements repesenting neighbors on our radar.
+   */
+  var all = function (){
+    return $(NEIGHBOR_SELECTOR);
+  };
 
-  /**
-   * Entry point - called when page is ready. Initializes the file upload
-   * plugin.
-   * @public
-   */
-  var init = function (){
-    var forms = $(FORM_SELECTOR);
-    forms.fileupload (FILE_UPLOAD_OPTS);
-  };
-  
-  /**
-   * Registers a single form (a.k.a a single endpoint) for receiving file
-   * uploads.
-   * @param {DOM}   DOM form element
-   */
-  var register = function (form){
-    if (!form) return;
-    $(form).fileupload(FILE_UPLOAD_OPTS);
-  };
-  
   //////////////// PUBLIC ////////////////
   return {
-    init : init,
-    register : register
+    TEMPLATE: NEIGHBOR_TMPL,
+    FILE_UPLOAD_OPTIONS: FILE_UPLOAD_OPTIONS,
+    all: all
   };
 
 }();
 
+/**
+ * Nodify widget. Adds node behavior.
+ */
+(function ($) {
+
+  $.widget('beam.nodify', {
+  
+    options: {
+      fileUploadOptions: Neighbor.FILE_UPLOAD_OPTIONS
+    },
+    
+    _setOption: function( key, value ) {
+      this._super( "_setOption", key, value );
+    },
+  
+    _create: function(){
+    
+      var options = this.options;
+      
+      // initialize file upload widget
+      this.element.fileupload(options.fileUploadOptions);
+    
+    },
+ 
+    destroy: function() {
+    }
+    
+  });
+
+}(jQuery));
+  
+  
 // document.ready
 $(function() {
-  Uploader.init();
+  Neighbor.all().nodify();
 });

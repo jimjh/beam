@@ -15,28 +15,31 @@ var Radar = function (){
 
   /** @const Name of event for a new neighbor */
   var EVT_NEIGHBOR_ARRIVED = "neighbor arrived";
+  
   /** @const Name of event for a leaving neighbor */
   var EVT_NEIGHBOR_LEFT =  "neighbor left";
   
-  var NODE_TMPL = 'node-tmpl';
-  var NODE_CONTAINER = '#node-container';
+  /** @const Selector of node container */
+  var CONTAINER_SELECTOR = '#neighbor-container';
   
-  /** @const Selector for forms that use fileupload plugin */
-  var FORM_SELECTOR = ".fileupload";
+  var origin = undefined;
 
   /**
-   * Entry point - called when websockets have been registered. Listens
-   * for neighbor additions and removals.
-   * @param {Socket}  socket.io web socket
+   * Entry point - called when websockets have been registered and after
+   * a location fix has been obtained. Listens for neighbor additions and
+   * removals.
+   * @param {Socket}    socket.io web socket
+   * @param {Position}  geolocation fix
    * @public
    */
-  var init = function (socket){
+  var init = function (socket, center){
   
-    if (!socket){
+    if (!socket || !center){
       // TODO: error handling
       return;
     }
     
+    // listen for neighbor arrival
     socket.on (EVT_NEIGHBOR_ARRIVED, function(arrival){
     
       if (!arrival){
@@ -44,12 +47,12 @@ var Radar = function (){
         return;
       }
       
-      var node = $(tmpl(NODE_TMPL, arrival));
-      Uploader.register(node.find(FORM_SELECTOR));
-      node.appendTo($(NODE_CONTAINER));
+      var node = $(tmpl(Neighbor.TEMPLATE, arrival)).nodify();
+      node.appendTo($(CONTAINER_SELECTOR));
       
     });
     
+    // listen for neighbor departure
     socket.on (EVT_NEIGHBOR_LEFT, function(departure){
       
       if (!departure){
@@ -62,6 +65,10 @@ var Radar = function (){
       }
       
     });
+    
+    // position nodes
+    origin = {lat: center.coords.latitude, lon: center.coords.longitude};
+    console.log (origin);
   
   };
 
